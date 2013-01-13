@@ -1645,7 +1645,7 @@
 		<widget name="arrowup2" pixmap="army.mod/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="on" />
 	</screen>
 	<!-- Sleep Timer Edit  -->
-	<screen name="SleepTimerEdit" position="340,240" size="600,260" title="Sleep Timer">
+	<!--screen name="SleepTimerEdit" position="340,240" size="600,260" title="Sleep Timer">
 		<widget name="current_status" position="40,40" size="460,40" valign="center" font="Regular;22" />
 		<widget name="red" pixmap="army.mod/buttons/button_red.png" position="10,88" size="12,12" alphatest="on" />
 		<widget name="green" pixmap="army.mod/buttons/button_green.png" position="10,128" size="12,12" alphatest="on" />
@@ -1659,7 +1659,16 @@
 		<widget name="input" position="342,10" size="40,32" font="Regular;24" />
 		<widget name="aftertext" position="380,10" size="160,32" font="Regular;24" />
 		<ePixmap pixmap="army.mod/sleeptimer.png" position="485,50" size="105,125" alphatest="on" />
-	</screen>
+	</screen-->
+  <screen name="SleepTimerEdit" position="center,center" size="840,570" title="Sleep Timer" flags="wfNoBorder">
+    <ePixmap pixmap="army.mod/buttons/red.png" position="40,493" size="35,27" alphatest="blend" transparent="1" />
+    <ePixmap pixmap="army.mod/buttons/green.png" position="243,493" size="35,27" alphatest="blend" transparent="1" />
+    <widget name="key_red" render="Label" position="78,496" size="150,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="white" backgroundColor="grey" transparent="1" />
+    <widget name="key_green" render="Label" position="281,496" size="150,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="white" backgroundColor="grey" transparent="1" />
+    <widget name="current_status" position="278,400" size="522,25" font="Regular;22" halign="center" backgroundColor="black" transparent="1" />
+    <widget name="config" position="20,64" size="800,324" itemHeight="25" scrollbarMode="showOnDemand" selectionPixmap="army.mod/menu/sel900x30.png" backgroundColor="black" transparent="1" font="Regular; 24" />
+  </screen>
+  
 	<!-- Subservices Quickzap  -->
 	<screen name="SubservicesQuickzap" position="380,600" size="560,100" title="Subservices" backgroundColor="transparent" flags="wfNoBorder">
 		<widget source="session.RecordState" render="Pixmap" pixmap="army.mod/icons/record.png" position="450,0" zPosition="2" size="14,14" alphatest="on">
