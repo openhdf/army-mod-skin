@@ -915,7 +915,7 @@
 	</screen>
 	<!-- Console  -->
 	<screen source="Title" name="Console" position="center,center" size="1130,520" title="Command execution...">
-		<widget name="text" position="20,20" size="1090,480" font="Console;21" />
+		<widget name="text" position="20,20" size="1090,480" font="Console;20" />
 	</screen>
 	<!-- clock Display  -->
 	<screen name="clockDisplay" position="420,230" size="340,300">
