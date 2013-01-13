@@ -914,7 +914,7 @@
 		</applet>
 	</screen>
 	<!-- Console  -->
-	<screen name="Console" position="center,center" size="1130,520" title="Command execution...">
+	<screen source="Title" name="Console" position="center,center" size="1130,520" title="Command execution...">
 		<widget name="text" position="20,20" size="1090,480" font="Console;21" />
 	</screen>
 	<!-- clock Display  -->
