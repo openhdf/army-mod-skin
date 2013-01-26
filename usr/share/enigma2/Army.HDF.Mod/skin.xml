@@ -2144,7 +2144,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 	</screen>
 	<!-- Softwaremanager  -->
 	<!-- 183  Update Plugin Menu  ( 1 )-->
-	<screen name="UpdatePluginMenu" position="center,center" size="1160,560" title="Softwaremanager...">
+	<!--screen name="UpdatePluginMenu" position="center,center" size="1160,560" title="Softwaremanager...">
 		<ePixmap pixmap="Army.HDF.Mod/buttons/red25.png" position="455,500" size="250,40" alphatest="on" zPosition="1" />
 		<widget source="key_red" render="Label" position="455,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget source="menu" render="Listbox" position="440,20" size="650,500" zPosition="3" scrollbarMode="showNever" selectionPixmap="Army.HDF.Mod/icons/listselection650x50-fs8.png" backgroundColorSelected="#10000000" transparent="1">
@@ -2167,7 +2167,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 				}
 			</convert>
 		</widget>
-	</screen>
+	</screen-->
 	<!-- 184 PluginManager (Extensions management) ( 4 )-->
 	<screen name="PluginManager" position="300,150" size="680,520" title="Extensions management">
 		<widget source="list" render="Listbox" position="20,5" size="640,360" scrollbarMode="showOnDemand" transparent="1">
