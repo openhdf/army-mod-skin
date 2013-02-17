@@ -865,7 +865,7 @@
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Progress" position="863,435" zPosition="3" pixmap="Army.HDF.Mod/chan_p_bar.png" size="250,4" transparent="1">
+		<widget source="ServiceEvent" render="Progress" position="863,425" zPosition="3" pixmap="Army.HDF.Mod/chan_p_bar.png" size="250,4" transparent="1">
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="716,442" zPosition="1" size="545,200" font="RegularBB; 18" foregroundColor="unffff" transparent="1">
