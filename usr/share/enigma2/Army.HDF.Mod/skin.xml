@@ -389,8 +389,6 @@
 			<convert type="ValueRange">2,2</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<!--  ATTENZIONE: QUESTI WIDGET NON POSSONO ESSERE SPOSTATI O RIMOSSI DALLA EXTRA INFOBAR  -->
-		<!--  WARNING: THESE WIDGETS CANNOT BE MOVED OR REMOVED FROM EXTRA INFOBAR SCREEN  -->
 		<eLabel text="Snr:" zPosition="3" position="964,643" size="70,24" halign="right" font="Regular;20" foregroundColor="grey" transparent="1" backgroundColor="transpBlack" />
 		<widget source="session.FrontendStatus" render="Label" position="1073,636" zPosition="3" size="50,24" halign="center" font="Regular; 12" foregroundColor="grey" transparent="1" backgroundColor="transpBlack" valign="bottom">
 			<convert type="FrontendInfo">SNR</convert>
@@ -839,12 +837,6 @@
 		<eLabel text="Channel Selection TV" position="210,35" zPosition="2" size="400,32" font="RegularAA;28" halign="left" transparent="1" foregroundColor="unffff" backgroundColor="unb67a2" />
 		<widget source="session.VideoPicture" render="Pig" position="721,82" size="524,291" zPosition="1" backgroundColor="transparent" />
 		<widget name="list" position="20,80" size="680,545" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#666666" serviceItemHeight="32" serviceNumberFont="Regular;20" serviceNameFont="Regular;24" serviceInfoFont="RegularAA;20" colorServiceDescription="grey" picServiceEventProgressbar="Army.HDF.Mod/pl.png" selectionPixmap="Army.HDF.Mod/icons/listselection700x32-fs8.png" transparent="1" itemHeight="20" />
-	<!-- widget source="global.CurrentTime" render="Label" position="1165,40" size="80,22" zPosition="2" font="LCD;25" valign="bottom" halign="left" foregroundColor="FFFFFFFF" backgroundColor="un333333" transparent="1">
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1220,34" size="70,22" zPosition="2" font="LCD;18" valign="bottom" halign="left" foregroundColor="unf23d21" backgroundColor="un333333" transparent="1">
-			<convert type="ClockToText">Format::%S</convert>
-		</widget-->
 		<ePixmap position="51,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="2" />
 		<ePixmap position="362,660" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="2" />
 		<ePixmap position="668,660" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="2" />
@@ -1665,15 +1657,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="aftertext" position="380,10" size="160,32" font="Regular;24" />
 		<ePixmap pixmap="Army.HDF.Mod/sleeptimer.png" position="485,50" size="105,125" alphatest="on" />
 	</screen-->
-  <screen name="SleepTimerEdit" position="center,center" size="840,570" title="Sleep Timer" flags="wfNoBorder">
-    <ePixmap pixmap="Army.HDF.Mod/buttons/red.png" position="40,493" size="35,27" alphatest="blend" transparent="1" />
-    <ePixmap pixmap="Army.HDF.Mod/buttons/green.png" position="243,493" size="35,27" alphatest="blend" transparent="1" />
-    <widget name="key_red" render="Label" position="78,496" size="150,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="white" backgroundColor="grey" transparent="1" />
-    <widget name="key_green" render="Label" position="281,496" size="150,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="white" backgroundColor="grey" transparent="1" />
-    <widget name="current_status" position="278,400" size="522,25" font="Regular;22" halign="center" backgroundColor="black" transparent="1" />
-    <widget name="config" position="20,64" size="800,324" itemHeight="25" scrollbarMode="showOnDemand" selectionPixmap="Army.HDF.Mod/menu/sel900x30.png" backgroundColor="black" transparent="1" font="Regular; 24" />
-  </screen>
-  
+	<screen name="SleepTimerEdit" position="center,center" size="840,570" title="Sleep Timer" flags="wfNoBorder">
+		<ePixmap pixmap="Army.HDF.Mod/buttons/red.png" position="40,493" size="35,27" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="Army.HDF.Mod/buttons/green.png" position="243,493" size="35,27" alphatest="blend" transparent="1" />
+		<widget name="key_red" render="Label" position="78,496" size="150,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="white" backgroundColor="grey" transparent="1" />
+		<widget name="key_green" render="Label" position="281,496" size="150,26" zPosition="1" font="Regular;22" halign="left" foregroundColor="white" backgroundColor="grey" transparent="1" />
+		<widget name="current_status" position="278,400" size="522,25" font="Regular;22" halign="center" backgroundColor="black" transparent="1" />
+		<widget name="config" position="20,64" size="800,324" itemHeight="25" scrollbarMode="showOnDemand" selectionPixmap="Army.HDF.Mod/menu/sel900x30.png" backgroundColor="black" transparent="1" font="Regular; 24" />
+	</screen>
 	<!-- Subservices Quickzap  -->
 	<screen name="SubservicesQuickzap" position="380,600" size="560,100" title="Subservices" backgroundColor="transparent" flags="wfNoBorder">
 		<widget source="session.RecordState" render="Pixmap" pixmap="Army.HDF.Mod/icons/record.png" position="450,0" zPosition="2" size="14,14" alphatest="on">
@@ -1708,22 +1699,21 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="apply" position="210,240" size="250,35" />
 	</screen>
 	<!-- Timer Edit List -->
-	<screen name="TimerEditList" position="center,center" size="1160,560" title="Timer Editor">
-		<widget name="timerlist" position="20,20" size="1120,350" scrollbarMode="showOnDemand" />
-		<ePixmap position="32,500" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
-		<ePixmap position="314,500" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
-		<ePixmap position="596,500" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
-		<ePixmap position="878,500" size="250,40" pixmap="Army.HDF.Mod/buttons/blue25.png" alphatest="on" zPosition="1" />
+	<screen name="TimerEditList" position="center,center" size="1160,560" title="Timer Editor"><widget name="timerlist" position="20,20" size="1120,350" scrollbarMode="showOnDemand" />
+		<ePixmap position="32,500" size="250,40" pixmap="army/buttons/red25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="314,500" size="250,40" pixmap="army/buttons/green25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="596,500" size="250,40" pixmap="army/buttons/yellow25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="878,500" size="250,40" pixmap="army/buttons/blue25.png" alphatest="on" zPosition="1" />
 		<widget name="key_red" position="32,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_green" position="314,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_yellow" position="596,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_blue" position="878,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-	</screen>
+		</screen>
 	<!--  Timer Entry -->
 	<screen name="TimerEntry" position="center,center" size="1160,560" title="Timer entry">
 		<widget name="config" position="20,20" size="1120,350" scrollbarMode="showOnDemand" />
-		<ePixmap position="220,500" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
-		<ePixmap position="690,500" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="220,500" size="250,40" pixmap="army/buttons/red25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="690,500" size="250,40" pixmap="army/buttons/green25.png" alphatest="on" zPosition="1" />
 		<widget name="canceltext" position=" 220,501" size="250,40" font="Regular;24" halign="center" valign="center" foregroundColor="white" zPosition="2" transparent="1" />
 		<widget name="oktext" position="690,501" size="250,40" font="Regular;24" halign="center" valign="center" foregroundColor="white" zPosition="2" transparent="1" />
 	</screen>
@@ -1731,10 +1721,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 	<screen name="TimerLog" position="center,center" size="1160,560" title="Timer log">
 		<widget name="loglist" position="20,20" size="1120,350" scrollbarMode="showOnDemand" />
 		<widget name="logentry" position="20,380" size="1120,130" font="Regular;20" />
-		<ePixmap position="32,500" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
-		<ePixmap position="314,500" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
-		<ePixmap position="596,500" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
-		<ePixmap position="878,500" size="250,40" pixmap="Army.HDF.Mod/buttons/blue25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="32,500" size="250,40" pixmap="army/buttons/red25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="314,500" size="250,40" pixmap="army/buttons/green25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="596,500" size="250,40" pixmap="army/buttons/yellow25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="878,500" size="250,40" pixmap="army/buttons/blue25.png" alphatest="on" zPosition="1" />
 		<widget name="key_red" position="32,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_green" position="314,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_yellow" position="596,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
@@ -1745,18 +1735,34 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="list" position="20,20" size="1120,250" scrollbarMode="showOnDemand" />
 		<widget name="timer1" position="20,45" size="530,225" scrollbarMode="showNever" />
 		<widget name="timer2" position="570,45" size="530,225" scrollbarMode="showNever" />
-		<ePixmap position="32,500" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
-		<ePixmap position="314,500" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
-		<ePixmap position="596,500" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
-		<ePixmap position="878,500" size="250,40" pixmap="Army.HDF.Mod/buttons/blue25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="32,500" size="250,40" pixmap="army/buttons/red25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="314,500" size="250,40" pixmap="army/buttons/green25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="596,500" size="250,40" pixmap="army/buttons/yellow25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="878,500" size="250,40" pixmap="army/buttons/blue25.png" alphatest="on" zPosition="1" />
 		<widget name="key_red" position="32,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_green" position="314,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_yellow" position="596,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_blue" position="878,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
-	<!--  Timer Selection -->
-	<screen name="TimerSelection" position="center,center" size="1280,720" title="Timer selection">
-		<widget name="timerlist" position="20,20" size="1120,350" scrollbarMode="showOnDemand" />
+	<screen name="TimerSelection" position="center,center" size="1100,605" title="Timer selection" flags="wfNoBorder">
+		<eLabel text="Timer Selection" position="270,20" size="800,43" font="Regular;35" halign="right" foregroundColor="white" backgroundColor="black" transparent="1" />
+		<widget name="timerlist" position="30,90" size="1040,450" itemHeight="75" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1" />
+	</screen>
+	<screen name="TimeshiftState" position="70,30" size="1140,68" title="TimeshiftState" flags="wfNoBorder">
+		<widget name="state" position="30,13" size="150,27" font="Arial;22" halign="center" backgroundColor="black" transparent="1" />
+		<widget source="session.CurrentService" render="Label" position="180,15" size="150,27" font="Arial;22" halign="left" backgroundColor="black" transparent="1">
+			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="920,15" size="80,27" font="Arial;22" halign="right" backgroundColor="black" transparent="1">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<eLabel text="/" position="1010,15" size="10,27" font="Arial;22" halign="center" backgroundColor="black" transparent="1" />
+		<widget source="session.CurrentService" render="Label" position="1030,15" size="80,27" font="Arial;22" halign="left" backgroundColor="black" transparent="1">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Progress" position="10,49" size="1120,8" pixmap="Nobile.HDF.Mod/progress.png" transparent="1">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
 	</screen>
 	<!-- Video Finetune -->
 	<screen name="VideoFinetune" position="0,0" size="1280,720" backgroundColor="transpBlack">
