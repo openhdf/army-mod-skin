@@ -816,11 +816,11 @@
 		</widget>
 	</screen>
 	<!-- Extensions selection  -->
-	<screen backgroundColor="background" flags="wfNoBorder" name="ExtensionsList" position="0,0" size="1280,720" title="Input">
-		<widget backgroundColor="transparent" font="Regular;22" position="70,35" name="text" size="360,50" transparent="1" valign="center" zPosition="1" />
-		<widget itemHeight="28" enableWrapAround="1" name="list" position="815,320" scrollbarMode="showNever" size="410,360" transparent="1"/>
+	<screen backgroundColor="background" flags="wfNoBorder" name="ExtensionsList" position="center,center" size="840,570" title="Extensions">
+		<widget backgroundColor="transparent" font="Regular;22" position="70,35" name="text" size="850,50" transparent="1" valign="center" zPosition="1" />
+		<widget itemHeight="28" enableWrapAround="1" name="list" position="60,60" scrollbarMode="showOnDemand" size="700,366" transparent="1" />
+		<eLabel text="Extensions" position="115,495" size="700,45" zPosition="1" font="Bold; 40" halign="right" foregroundColor="white" backgroundColor="black" transparent="1" />
 	</screen>
-
 	<screen name="BouquetSelector" position="center,center" size="710,460" title="Choose bouquet">
 		<widget name="menu" position="20,20" size="670,400" scrollbarMode="showOnDemand" />
 	</screen>
@@ -828,7 +828,7 @@
 	<screen name="ChannelContextMenu" position="center,center" size="600,340" title="Channellist menu">
 		<widget name="menu" position="20,20" size="560,260" scrollbarMode="showOnDemand" />
 	</screen>
-				<!-- Channel selection - TV -->
+	<!-- Channel selection - TV -->
 	<screen name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
 		<ePixmap position="864,425" zPosition="2" size="250,4" pixmap="Army.HDF.Mod/chan_p1_bar.png" alphatest="on" />
