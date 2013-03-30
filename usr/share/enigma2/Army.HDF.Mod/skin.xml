@@ -577,6 +577,21 @@
 		</widget>
 	</screen>
 	<!--  90 About -->
+	<screen name="AboutOE" position="center,center" size="1000,520" title="About">
+		<ePixmap position="78,15" zPosition="-1" size="550,70" pixmap="Army.HDF.Mod/logo_DM_HD.png" alphatest="blend" transparent="1" />
+		<ePixmap position="670,15" zPosition="-1" size="280,210" pixmap="Army.HDF.Mod/prev.png" alphatest="blend" transparent="1" />
+		<ePixmap position="740,290" zPosition="-1" size="148,131" pixmap="Army.HDF.Mod/hdf.png" alphatest="blend" transparent="1" />
+		<eLabel text="OpenHDF" position="60,20" size="600,32" font="Regular;26" halign="left" backgroundColor="transpBlack" transparent="1" />
+		<eLabel text="https://github.com/openhdf" position="60,60" size="352,28" font="Regular;19" transparent="1" zPosition="1"/>
+		<eLabel text="https://github.com/oe-alliance" position="60,85" size="354,28" font="Regular;19" transparent="1" zPosition="1"/>
+		<widget name="AboutScrollLabel" position="60,220" size="379,310" font="Regular;20" transparent="1" zPosition="1"/>
+		<widget source="EnigmaVersion" render="Label" position="60,140" size="580,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
+		<widget source="ImageVersion" render="Label" position="60,170" size="580,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
+		<widget source="FPVersion" render="Label" position="60,210" size="580,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
+		<eLabel text="Skin modded by Koivo" position="680,470" size="600,32" font="Regular;26" halign="left" backgroundColor="transpBlack" transparent="1" />
+		<eLabel text="Press Info for changelogs ..." position="100,460" size="600,32" font="Regular;18" halign="left" backgroundColor="transpBlack" transparent="1" />
+		<ePixmap position="55,460" size="70,30" pixmap="Army.HDF.Mod/buttons/key_info.png" alphatest="blend"/>
+	</screen>
 	<screen name="About" position="center,center" size="1000,520" title="About">
 		<ePixmap position="78,15" zPosition="-1" size="550,70" pixmap="Army.HDF.Mod/logo_DM_HD.png" alphatest="blend" transparent="1" />
 		<ePixmap position="670,15" zPosition="-1" size="280,210" pixmap="Army.HDF.Mod/prev.png" alphatest="blend" transparent="1" />
