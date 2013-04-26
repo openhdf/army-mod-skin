@@ -1714,26 +1714,38 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="apply" position="210,240" size="250,35" />
 	</screen>
 	<!--  AutoTimer -->
-	<screen name="AutoTimerOverview" position="0,0" size="1280,720" title="AutoTimer Overview" flags="wfNoBorder">
-		<!--ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1bp-fs8.png" transparent="1"/-->
-        <widget source="global.CurrentTime" render="Label" position="1130,40" size="80,26" font="Regular;26" halign="right" backgroundColor="backtop" transparent="1">
-			<convert type="ClockToText">Default</convert>
-        </widget>
-        <widget source="global.CurrentTime" render="Label" position="900,70" size="310,22" font="Regular;20" halign="right" backgroundColor="backtop" transparent="1">
-			<convert type="ClockToText">Date</convert>
-        </widget>
-        <widget source="Title" render="Label" position="80,60" size="800,35" font="Regular;32" backgroundColor="backtop" transparent="1"/>
-		<eLabel position="480,105" size="730,520" zPosition="1" backgroundColor="grey" />
-		<eLabel position="482,107" size="726,516" zPosition="2" backgroundColor="background" />
-		<widget name="entries"  position="490,115" size="710,510" zPosition="3" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" transparent="1" />
-		<ePixmap pixmap="Army.HDF.Mod/buttons/green.png" position="370,637" size="21,21" alphatest="on" />
-		<ePixmap pixmap="Army.HDF.Mod/buttons/yellow.png" position="660,637" size="21,21" alphatest="on" />
-		<ePixmap pixmap="Army.HDF.Mod/buttons/blue.png" position="950,637" size="21,21" alphatest="on" />
-		<widget source="key_green" render="Label" position="410,636" size="240,26" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_yellow" render="Label" position="700,636" size="240,26" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
-		<widget source="key_blue" render="Label" position="990,636" size="240,26" font="Regular;22" halign="left" backgroundColor="black" transparent="1" />
+	<screen name="AutoTimerOverview" position="center,center" size="1160,560" title="AutoTimer Overview" >
+		<widget name="entries"  position="420,35" size="700,433" zPosition="3" itemHeight="33" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" transparent="1" />
+		<ePixmap position="32,500" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="314,500" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="596,500" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="878,500" size="250,40" pixmap="Army.HDF.Mod/buttons/blue25.png" alphatest="on" zPosition="1" />
+		<widget source="key_red" render="Label" position="32,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget source="key_green" render="Label" position="314,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget source="key_yellow" render="Label" position="596,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget source="key_blue" render="Label" position="878,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<ePixmap position="100,center" size="300,300" zPosition="2" pixmap="Army.HDF.Mod/menu/timer.png" transparent="1" alphatest="blend" />
-       </screen>
+    </screen>
+	<screen name="AutoTimerSettings" position="center,center" size="1160,560" title="AutoTimer Settings">
+		<widget name="config" position="30,35" size="680,420" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="background" enableWrapAround="1" transparent="1" />
+		<widget source="help" render="Label" position="760,35" size="310,200" font="Regular;22" backgroundColor="background" transparent="1" />
+		<ePixmap position="32,500" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="314,500" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
+		<widget source="key_red" render="Label" position="32,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget source="key_green" render="Label" position="314,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+	</screen>
+	<screen name="AutoTimerEditor" position="center,center" size="1160,560"  title="AutoTimer Editor">
+		<widget name="config" position="30,35" size="680,420" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1" />
+		<widget source="help" render="Label" position="760,35" size="310,200" font="Regular;22" backgroundColor="background" transparent="1" />
+		<ePixmap position="32,500" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="314,500" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="596,500" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="878,500" size="250,40" pixmap="Army.HDF.Mod/buttons/blue25.png" alphatest="on" zPosition="1" />
+		<widget source="key_red" render="Label" position="32,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget source="key_green" render="Label" position="314,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget source="key_yellow" render="Label" position="596,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget source="key_blue" render="Label" position="878,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+	</screen>   
 	<!-- Timer Edit List -->
 	<screen name="TimerEditList" position="center,center" size="1160,560" title="Timer Editor"><widget name="timerlist" position="20,20" size="1120,350" scrollbarMode="showOnDemand" />
 		<ePixmap position="32,500" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
