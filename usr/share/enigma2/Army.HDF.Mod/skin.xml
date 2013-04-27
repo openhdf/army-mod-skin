@@ -464,7 +464,7 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="Army.HDF.Mod/menu/timer.png" position="830,90" size="300,300" alphatest="blend" transparent="1">
-			<convert type="MenuEntryCompare">timer_edit</convert>
+			<convert type="MenuEntryCompare">timer_menu</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="Army.HDF.Mod/menu/media_player.png" position="830,90" size="300,300" alphatest="blend" transparent="1">
@@ -1713,6 +1713,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="end" position="708,150" size="72,35" font="Regular;25" />
 		<widget name="apply" position="210,240" size="250,35" />
 	</screen>
+	
 	<!--  AutoTimer -->
 	<screen name="AutoTimerOverview" position="center,center" size="1160,560" title="AutoTimer Overview" >
 		<widget name="entries"  position="420,35" size="700,433" zPosition="3" itemHeight="33" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" transparent="1" />
@@ -1726,6 +1727,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget source="key_blue" render="Label" position="878,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<ePixmap position="100,center" size="300,300" zPosition="2" pixmap="Army.HDF.Mod/menu/timer.png" transparent="1" alphatest="blend" />
     </screen>
+	
 	<screen name="AutoTimerSettings" position="center,center" size="1160,560" title="AutoTimer Settings">
 		<widget name="config" position="30,35" size="680,420" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="background" enableWrapAround="1" transparent="1" />
 		<widget source="help" render="Label" position="760,35" size="310,200" font="Regular;22" backgroundColor="background" transparent="1" />
@@ -1734,6 +1736,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget source="key_red" render="Label" position="32,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget source="key_green" render="Label" position="314,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
+	   
 	<screen name="AutoTimerEditor" position="center,center" size="1160,560"  title="AutoTimer Editor">
 		<widget name="config" position="30,35" size="680,420" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1" />
 		<widget source="help" render="Label" position="760,35" size="310,200" font="Regular;22" backgroundColor="background" transparent="1" />
@@ -1741,13 +1744,16 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<ePixmap position="314,500" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
 		<ePixmap position="596,500" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
 		<ePixmap position="878,500" size="250,40" pixmap="Army.HDF.Mod/buttons/blue25.png" alphatest="on" zPosition="1" />
+		
 		<widget source="key_red" render="Label" position="32,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget source="key_green" render="Label" position="314,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget source="key_yellow" render="Label" position="596,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget source="key_blue" render="Label" position="878,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>   
+	   
 	<!-- Timer Edit List -->
-	<screen name="TimerEditList" position="center,center" size="1160,560" title="Timer Editor"><widget name="timerlist" position="20,20" size="1120,350" scrollbarMode="showOnDemand" />
+	<screen name="TimerEditList" position="center,center" size="1160,560" title="Timer Editor">
+	<widget name="timerlist" position="20,20" size="1120,350" scrollbarMode="showOnDemand" />
 		<ePixmap position="32,500" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
 		<ePixmap position="314,500" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
 		<ePixmap position="596,500" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
@@ -3146,62 +3152,74 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 	<!-- Enhanced Movie Center (EMC) -->
 	<!-- EMC 1280 EMCSelection-->
 	<screen name="EMCSelection" position="0,0" size="1280,720" title="Enhanced Movie Center" flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-10" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" transparent="1" />
-		<ePixmap pixmap="skin_default/icons/clock.png" position="1100,33" zPosition="1" size="26,26" alphatest="on" />
-		<eLabel text="E n h a n c e d  M o v i e  C e n t e r" position="450,18" size="450,25" font="EMCRegularFont;25" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1" />
-		<widget source="global.CurrentTime" render="Label" position="1120,25" size="160,30" font="EMCRegularFont;25" foregroundColor="#00bab329" backgroundColor="#000000" shadowColor="#000000" halign="left" transparent="1">
+		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
+		<ePixmap position="717,78" zPosition="-1" size="533,300" pixmap="Army.HDF.Mod/tv2_1-fs8.png" alphatest="on" />
+		
+		<eLabel text="Enhanced Movie Center" position="210,30" zPosition="2" size="400,32" font="RegularAA;28" halign="left" transparent="1" foregroundColor="unffff" backgroundColor="unb67a2" />
+		
+		<widget source="global.CurrentTime" render="Label" position="50,35" size="160,30" font="EMCRegularFont;25" foregroundColor="#00bab329" backgroundColor="#000000" shadowColor="#000000" halign="left" transparent="1">
 			<convert type="EMCClockToText">WithSeconds</convert>
 		</widget>
-		<widget source="Title" render="Label" position="528,47" size="540,155" font="EMCRegularFont;20" foregroundColor="#00bab329" backgroundColor="#444444" transparent="1" />
-		<widget source="global.CurrentTime" render="Label" position="1015,60" size="210,30" font="EMCRegularFont;25" halign="right" foregroundColor="#00bab329" backgroundColor="#000000" shadowColor="#000000" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="595,35" size="210,30" font="EMCRegularFont;25" halign="left" foregroundColor="#00bab329" backgroundColor="#000000" shadowColor="#000000" transparent="1">
 			<convert type="EMCClockToText">Format:%d.%m.%Y</convert>
 		</widget>
-		<ePixmap position="65,110" size="390,225" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnhancedMovieCenter/img/pig_bg.png" />
-		<widget source="session.VideoPicture" render="Pig" position="70,115" size="380,215" zPosition="3" backgroundColor="#ff000000" />
-		<widget name="Cover" position="70,115" size="380,215" zPosition="4" backgroundColor="#00000000" alphatest="off" transparent="0" />
-		<widget name="list" position="528,120" size="700,532" itemHeight="28" Coolfont="EMCRegularFont;20" CoolSelectfont="EMCRegularFont;20" CoolDatefont="EMCRegularFont;20" CoolMoviePos="35" CoolMovieSize="545" CoolFolderSize="550" CoolTitleColor="0" CoolDatePos="1000" CoolDateWidth="110" CoolDateColor="0" CoolHighlightColor="0" CoolProgressPos="1000" CoolBarPos="590" CoolBarHPos="8" CoolBarSize="55,10" CoolBarSizeSa="110,16" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnhancedMovieCenter/img/cursor.png" DefaultColor="#FFFFFF" UnwatchedColor="#FFFFFF" WatchingColor="#3486F4" FinishedColor="#46D93A" RecordingColor="#9F1313" BackColorSel="#00000000"  foregroundColorSelected="#ffffff" backgroundColor="#00000000" scrollbarMode="showNever" transparent="1" />
-		<widget name="wait" position="0,center" size="1280,50" zPosition="1" font="EMCRegularFont;32" foregroundColor="#FFFFFF" backgroundColor="#18080911" halign="center" valign="center" />
-		<widget source="Service" render="Label" position="30,47" size="480,55" font="EMCRegularFont;24" foregroundColor="#00bab329" backgroundColor="#444444" halign="center" transparent="1">
+		
+		<widget source="Service" render="Label" position="717,35" size="530,55" font="EMCRegularFont;24" foregroundColor="unffff" backgroundColor="#444444" halign="center" transparent="1">
 			<convert type="EMCEventName">Name</convert>
 		</widget>
-		<widget source="Service" render="Label" position="50,345" size="70,24" font="EMCRegularFont;20" halign="left" foregroundColor="#00bab329" backgroundColor="#444444" transparent="1">
+		
+		<widget source="Title" render="Label" position="300,70" size="520,20" font="EMCRegularFont;20" foregroundColor="#00bab329" backgroundColor="#444444" transparent="1" />
+		<widget source="session.VideoPicture" render="Pig" position="721,82" size="524,291" zPosition="1" backgroundColor="transparent" />
+		<widget name="Cover" position="721,82" size="524,291" zPosition="4" backgroundColor="#00000000" alphatest="off" transparent="0" />
+		<widget name="list" position="50,100" size="650,534" itemHeight="28" Coolfont="EMCRegularFont;22" CoolSelectfont="EMCRegularFont;22" 
+			CoolDatefont="EMCRegularFont;22" CoolMoviePos="35" CoolMovieSize="450" CoolFolderSize="500" CoolTitleColor="0" 
+			CoolDatePos="1000" CoolDateWidth="110" CoolDateColor="0" CoolHighlightColor="0" 
+			CoolProgressPos="1000" CoolBarPos="527" CoolBarHPos="8" 
+			CoolBarSize="55,10" CoolBarSizeSa="100,10" selectionPixmap="Army.HDF.Mod/icons/listselection700x32-fs8.png"
+			DefaultColor="#FFFFFF" UnwatchedColor="#FFFFFF" WatchingColor="#3486F4" FinishedColor="#46D93A" RecordingColor="#9F1313" 
+			BackColorSel="#00000000"  foregroundColorSelected="#ffffff" backgroundColor="#00000000" scrollbarMode="showOnDemand" transparent="1" />
+	
+		<widget source="Service" render="Label" position="767,382" size="70,24" font="EMCRegularFont;20" halign="left" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1">
 			<convert type="EMCServiceTime">StartTime</convert>
 			<convert type="EMCClockToText">Format:%H:%M </convert>
 		</widget>
-		<widget source="Service" render="Label" position="110,345" size="70,24" font="EMCRegularFont;20" foregroundColor="#00bab329" backgroundColor="#444444" transparent="1">
+		<widget source="Service" render="Label" position="817,382" size="70,24" font="EMCRegularFont;20" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1">
 			<convert type="EMCServiceTime">EndTime</convert>
 			<convert type="EMCClockToText">Format:- %H:%M </convert>
 		</widget>
-		<widget source="Service" render="Label" position="245,345" size="100,24" font="EMCRegularFont;20" halign="left" foregroundColor="#00bab329" backgroundColor="#444444" transparent="1">
+		<widget source="Service" render="Label" position="967,382" size="100,24" font="EMCRegularFont;20" halign="left" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1">
 			<convert type="EMCServiceTime">Duration</convert>
 			<convert type="EMCClockToText">AsLength</convert>
 		</widget>
-		<widget source="Service" render="Label" position="270,345" size="200,24" font="EMCRegularFont;20" foregroundColor="#00bab329" halign="right" backgroundColor="#444444" transparent="1">
+		<widget source="Service" render="Label" position="990,382" size="200,24" font="EMCRegularFont;20" foregroundColor="#FFFFFF" halign="right" backgroundColor="#444444" transparent="1">
 			<convert type="EMCMovieInfo">FileSize</convert>
 		</widget>
+		
 	<!-- EMC Short Description(Genre) -->
-		<widget source="Service" render="Label" position="50,370" size="425,22" font="EMCRegularFont; 19" zPosition="2" foregroundColor="#00bab329" backgroundColor="#444444" transparent="1" halign="center" >
+		<widget source="Service" render="Label" position="717,405" size="530,22" font="EMCRegularFont;20" zPosition="2" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1" halign="center" >
 			<convert type="EMCMovieInfo">ShortDescription</convert>
 		</widget>
-		<widget source="Service" render="Label" position="50,395" size="425,246" font="EMCRegularFont;19" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1" halign="left" valign="top">
+		<widget source="Service" render="Label" position="717,435" size="530,185" font="EMCRegularFont;20" foregroundColor="unffff" backgroundColor="#444444" transparent="1" halign="left" valign="top">
 			<convert type="EMCEventName">ExtendedDescription</convert>
 		</widget>
-		<widget source="Service" render="Label" position="50,640" size="200,24" font="EMCRegularFont;19" foregroundColor="#00bab329" halign="left" backgroundColor="#444444" transparent="1">
+		<widget source="Service" render="Label" position="717,630" size="200,24" font="EMCRegularFont;20" foregroundColor="#FFFFFF" halign="left" backgroundColor="#444444" transparent="1">
 			<convert type="EMCMovieInfo">RecordServiceName</convert>
 		</widget>
-		<widget source="Service" render="Label" position="210,640" size="300,24" font="EMCRegularFont;19" foregroundColor="#00bab329" halign="right" backgroundColor="#444444" transparent="1">
+		<widget source="Service" render="Label" position="947,630" size="300,24" font="EMCRegularFont;20" foregroundColor="#FFFFFF" halign="right" backgroundColor="#444444" transparent="1">
 			<convert type="EMCServiceTime">StartTime</convert>
 			<convert type="EMCClockToText">Date</convert>
-		</widget>
-		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnhancedMovieCenter/img/key-red.png" position="70,668" size="30,30" alphatest="on" />
-		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnhancedMovieCenter/img/key-green.png" position="375,668" size="30,30" alphatest="on" />
-		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnhancedMovieCenter/img/key-yellow.png" position="680,668" size="30,30" alphatest="on" />
-		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/EnhancedMovieCenter/img/key-blue.png" position="985,668" size="30,30" alphatest="on" />
-		<widget name="key_red" position="105,670" size="190,30" zPosition="1" font="EMCRegularFont;18" halign="left" foregroundColor="#9F1313" backgroundColor="#000000" transparent="1" />
-		<widget name="key_green" position="410,670" size="190,30" zPosition="1" font="EMCRegularFont;18" halign="left" foregroundColor="#00389416" backgroundColor="#000000" transparent="1" />
-		<widget name="key_yellow" position="715,670" size="190,30" zPosition="1" font="EMCRegularFont;18" halign="left" foregroundColor="#B59E01" backgroundColor="#444444" transparent="1" />
-		<widget name="key_blue" position="1020,670" size="190,30" zPosition="1" font="EMCRegularFont;18" halign="left" foregroundColor="#1E28B6" backgroundColor="#000000" transparent="1" />
-	</screen>
+		</widget>	
+
+		<ePixmap position="50,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="362,660" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="668,660" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="974,660" size="250,40" pixmap="Army.HDF.Mod/buttons/blue25.png" alphatest="on" zPosition="1" />
+		<widget source="key_red" render="Label" position="50,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget source="key_green" render="Label" position="362,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget source="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget source="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+	</screen>	
+
 	<!-- EMC 1280 EMCMediaCenter -->
 	<screen name="EMCMediaCenter" position="0,520" size="1280,720" title="InfoBar" backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-1" size="1280,200" pixmap="Army.HDF.Mod/moviebar-fs8.png" />
