@@ -7,6 +7,7 @@
 		<!-- Colors (#AARRGGBB) -->
 	<colors>
 		<color name="background" value="#25101010" />
+		<color name="background_tux" value="#00e8e8e8" />
 		<color name="black" value="#00000000" />
 		<color name="blue" value="#000035ff" />
 		<color name="border1" value="#004872a0" />
@@ -18,7 +19,7 @@
 		<color name="grey2" value="#22646c78" />
 		<color name="greyb" value="#007d7d7d" />
 		<color name="hellgreen" value="#2256c856" />
-		<color name="red" value="#00ff0d0d" />
+		<color name="red" value="#00ff0d0d" /> 
 		<color name="transparent" value="#ffffffff" />
 		<color name="transparent2" value="#ff000000" />
 		<color name="transpBlack" value="#14101010" />
@@ -3163,11 +3164,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget source="global.CurrentTime" render="Label" position="595,35" size="210,30" font="EMCRegularFont;25" halign="left" foregroundColor="#00bab329" backgroundColor="#000000" shadowColor="#000000" transparent="1">
 			<convert type="EMCClockToText">Format:%d.%m.%Y</convert>
 		</widget>
-		
 		<widget source="Service" render="Label" position="717,35" size="530,55" font="EMCRegularFont;24" foregroundColor="unffff" backgroundColor="#444444" halign="center" transparent="1">
 			<convert type="EMCEventName">Name</convert>
 		</widget>
-		
 		<widget source="Title" render="Label" position="300,70" size="520,20" font="EMCRegularFont;20" foregroundColor="#00bab329" backgroundColor="#444444" transparent="1" />
 		<widget source="session.VideoPicture" render="Pig" position="721,82" size="524,291" zPosition="1" backgroundColor="transparent" />
 		<widget name="Cover" position="721,82" size="524,291" zPosition="4" backgroundColor="#00000000" alphatest="off" transparent="0" />
@@ -3178,7 +3177,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 			CoolBarSize="55,10" CoolBarSizeSa="100,10" selectionPixmap="Army.HDF.Mod/icons/listselection700x32-fs8.png"
 			DefaultColor="#FFFFFF" UnwatchedColor="#FFFFFF" WatchingColor="#3486F4" FinishedColor="#46D93A" RecordingColor="#9F1313" 
 			BackColorSel="#00000000"  foregroundColorSelected="#ffffff" backgroundColor="#00000000" scrollbarMode="showOnDemand" transparent="1" />
-	
+		
+		<widget name="wait" position="0,center" size="1280,50" zPosition="1" font="EMCRegularFont;32" foregroundColor="#FFFFFF" backgroundColor="#18080911" halign="center" valign="center" />
+		
 		<widget source="Service" render="Label" position="767,382" size="70,24" font="EMCRegularFont;20" halign="left" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1">
 			<convert type="EMCServiceTime">StartTime</convert>
 			<convert type="EMCClockToText">Format:%H:%M </convert>
@@ -3194,7 +3195,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget source="Service" render="Label" position="990,382" size="200,24" font="EMCRegularFont;20" foregroundColor="#FFFFFF" halign="right" backgroundColor="#444444" transparent="1">
 			<convert type="EMCMovieInfo">FileSize</convert>
 		</widget>
-		
 	<!-- EMC Short Description(Genre) -->
 		<widget source="Service" render="Label" position="717,405" size="530,22" font="EMCRegularFont;20" zPosition="2" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1" halign="center" >
 			<convert type="EMCMovieInfo">ShortDescription</convert>
@@ -3286,4 +3286,484 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 			<convert type="ServicePosition">Summary</convert>
 		</widget>
 	</screen>
+	
+	 <!-- Cool TV Guide -->
+	<screen name="CoolChannelGuide" position="0,0" size="1280,720" title="Cool Channel Guide" flags="wfNoBorder">
+		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
+		<ePixmap position="717,78" zPosition="-1" size="533,300" pixmap="Army.HDF.Mod/tv2_1-fs8.png" alphatest="on" />
+		<eLabel text="C  o  o  l    C  h  a  n  n  e  l    G  u  i  d  e" position="510,20" size="450,30" font="Regular;26" foregroundColor="grey" backgroundColor="transparent" halign="center" transparent="1" />
+		<widget name="date" position="41,20" size="180,30" font="Regular;26" halign="left" foregroundColor="unffff" backgroundColor="transparent" transparent="1" />
+		<widget source="global.CurrentTime" render="Label" position="260,20" size="160,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" halign="left" transparent="1">
+		  <convert type="ClockToText">WithSeconds</convert>
+		</widget>
+		<widget source="Service" render="CoolPico" position="430,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
+		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />	
+		<widget source="global.CurrentTime" render="Label" position="1056,20" size="180,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" shadowColor="#000000" halign="right" transparent="1">
+		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<widget source="session.VideoPicture" render="Pig" position="721,82" size="524,291" zPosition="1" backgroundColor="transparent" />
+		
+		<widget source="Event" render="Label" position="721,435" size="100,25" font="Regular; 21" backgroundColor="transparent" shadowColor="#00605f5e" halign="center" transparent="1" foregroundColor="yellow">
+		  <convert type="EventTime">StartTime</convert>
+		  <convert type="ClockToText" />
+		</widget>
+		 
+		<widget source="Event" render="Label" position="1145,435" size="100,25" font="Regular; 21" backgroundColor="transparent" shadowColor="#00605f5e" halign="center" transparent="1" foregroundColor="yellow">
+		  <convert type="EventTime">EndTime</convert>
+		  <convert type="ClockToText">Format: %H:%M</convert>
+		</widget>
+	 
+		<widget source="Event" render="Label" position="717,405" size="524,291" font="Regular;24" backgroundColor="transparent" shadowColor="#00605f5e" transparent="1" halign="center" foregroundColor="unffff">
+		  <convert type="EventName">Name</convert>
+		</widget>
+		 
+		<widget source="Event" render="Progress" position="821,443" size="324,8" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/progress.png" borderWidth="2" borderColor="grey" zPosition="2" transparent="1">
+		  <convert type="EventTime">Progress</convert>
+		</widget>
+		
+		<widget source="Event" render="Label" position="721,470" zPosition="1" size="521,182" font="Regular; 20" foregroundColor="#FFFFFF" backgroundColor="transparent" transparent="1" valign="top">
+		  <convert type="EventName">ExtendedDescription</convert>
+		</widget>
+ 
+		<widget name="list" position="40,59" size="650,485" itemHeight="60" zPosition="25" CoolPico="35" CoolFont="Regular;22" 
+		CoolServiceFont="Regular;22" CoolEventFont="Regular;18" CoolServiceSize="380" CoolEventSize="610" CoolServicePos="10" 
+		CoolServiceHPos="4" CoolEventPos="10" CoolEventHPos="32" CoolBarPos="460" CoolBarHPos="14" CoolBarSize="100" CoolBarHigh="13"
+		CoolTimePos="495" CoolTimeHPos="9" CoolTimeSize="150" CoolDurationPos="510" CoolDurationSize="100" CoolDurationColor="yellow" 
+		CoolTimeColor="black" CoolServiceColor="unffff" CoolBarColor="grey" CoolEventColor="#FFFFFF" CoolBackColorSel="transparent" 
+		CoolRecPreColor="yellow" CoolRecColor="#ff0d0d" CoolTunerCol="#606060" CoolCurrentCol="#0066ff" 
+		selectionPixmap="Army.HDF.Mod/icons/listselection650x60-fs8.png" foregroundColor="#FFFFFF" backgroundColor="transparent" transparent="1" />
+	 
+		<widget source="Service" render="CoolNextEvent" position="40,545" size="475,78" font="Regular;19" 
+		backgroundColor="transparent" foregroundColor="grey2" transparent="1"/>
+
+		<widget source="Title" render="Label" position="40,632" size="180,32" zPosition="3" font="Regular;20" 
+		foregroundColor="grey" backgroundColor="transparent" halign="left" transparent="1" />
+
+		<ePixmap position="50,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="362,660" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="668,660" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="974,660" size="250,40" pixmap="Army.HDF.Mod/buttons/blue25.png" alphatest="on" zPosition="1" />
+		<widget name="key_red" render="Label" position="50,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_green" render="Label" position="362,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+
+	</screen>
+
+	<screen name="CoolNiceGuide" position="0,0" size="1280,720" title="Cool Nice Guide" flags="wfNoBorder">
+		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
+		<ePixmap position="37,54" zPosition="1" size="378,216" pixmap="Army.HDF.Mod/tv_2-fs8.png" alphatest="on" />
+		
+		<eLabel text="C  o  o  l    N  i  c  e    G  u  i  d  e" position="510,20" size="450,30" font="Regular;26" foregroundColor="grey" backgroundColor="transparent" halign="center" transparent="1" />
+		<widget name="date" position="41,20" size="180,30" font="Regular;26" halign="left" foregroundColor="unffff" backgroundColor="transparent" transparent="1" />
+		
+		<widget source="global.CurrentTime" render="Label" position="260,20" size="160,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" halign="left" transparent="1">
+		  <convert type="ClockToText">WithSeconds</convert>
+		</widget>
+		<widget source="Service" render="CoolPico" position="430,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
+		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
+		
+		<widget source="global.CurrentTime" render="Label" position="1056,20" size="180,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" shadowColor="#000000" halign="right" transparent="1">
+		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<widget source="session.VideoPicture" render="Pig" position="41,58" size="370,208" zPosition="3" backgroundColor="transparent" />
+	
+		<widget source="Event" render="Label" position="420,60" size="100,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" halign="right" transparent="1">
+		  <convert type="EventTime">StartTime</convert>
+		  <convert type="ClockToText" />
+		</widget>
+		<widget source="Event" render="Label" position="533,60" size="100,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" halign="left" transparent="1">
+		  <convert type="EventTime">EndTime</convert>
+		  <convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="630,60" size="542,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" transparent="1" halign="left">
+		  <convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="Label" position="450,94" zPosition="1" size="750,158" font="Regular;20" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1" valign="top">
+		  <convert type="EventName">ExtendedDescription</convert>
+		</widget>
+	
+		<widget name="timeline_text" position="9,276" size="1192,30" foregroundColor="grey" backgroundColor="darkgrey2" transparent="1" font="Regular; 20" />
+		<widget name="list" position="40,303" size="1200,343" CoolPiconFontCol="#FFFFFF" CoolNoPiconBackCol="#aaaaaa" CoolTVBackCol="#aaaaaa" 
+		CoolBackCol="#aaaaaa" CoolTVBackColSel="#aaaaaa" CoolNowFontCol="#FFFFFF" CoolNowBackCol="#aaaaaa" CoolNowBackColSel="#aaaaaa" 
+		CoolNowFontColSel="#000000" CoolFontCol="#FFFFFF" CoolFontColSel="#000000" CoolBorderColR="#00000000" CoolBorderColL="#00000000" 
+		scrollbarMode="showNever" transparent="1" />
+		
+		<widget name="timeline_now" position="0,303" zPosition="2" size="19,343" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="on" />
+
+		<ePixmap position="50,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="362,660" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="668,660" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="974,660" size="250,40" pixmap="Army.HDF.Mod/buttons/blue25.png" alphatest="on" zPosition="1" />
+		<widget name="key_red" render="Label" position="50,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_green" render="Label" position="362,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+
+	</screen>
+	
+	<screen name="CoolTinyGuide" position="0,0" size="1280,720" title="Cool Tiny Guide" flags="wfNoBorder">
+		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
+		
+		<eLabel text="C  o  o  l    T  i n  y    G  u  i  d  e" position="510,20" size="450,30" font="Regular;26" foregroundColor="grey" backgroundColor="transparent" halign="center" transparent="1" />
+		<widget name="date" position="41,20" size="180,30" font="Regular;26" halign="left" foregroundColor="unffff" backgroundColor="transparent" transparent="1" />
+		
+		<widget source="global.CurrentTime" render="Label" position="260,20" size="160,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" halign="left" transparent="1">
+		  <convert type="ClockToText">WithSeconds</convert>
+		</widget>
+		<widget source="Service" render="CoolPico" position="430,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
+		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
+		
+		<widget source="global.CurrentTime" render="Label" position="1056,20" size="180,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" shadowColor="#000000" halign="right" transparent="1">
+		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+
+		<widget name="timeline_text" position="9,60" size="1192,30" foregroundColor="grey" backgroundColor="darkgrey2" transparent="1" font="Regular; 20" />
+		<widget name="timeline_now" position="0,87" zPosition="2" size="19,470" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="on" />
+		<widget name="list" position="40,87" size="1200,465" CoolPiconFontCol="#FFFFFF" CoolNoPiconBackCol="#aaaaaa" CoolTVBackCol="#aaaaaa" 
+		CoolBackCol="#aaaaaa" CoolTVBackColSel="#aaaaaa" CoolNowFontCol="#FFFFFF" CoolNowBackCol="#aaaaaa" CoolNowBackColSel="#aaaaaa" 
+		CoolNowFontColSel="#000000" CoolFontCol="#FFFFFF" CoolFontColSel="#000000" CoolBorderColR="#00000000" CoolBorderColL="#00000000" 
+		scrollbarMode="showNever" transparent="1" />
+
+		<widget source="Title" render="Label" position="1056,555" size="180,32" zPosition="3" font="Regular;20" foregroundColor="grey" backgroundColor="#444444" halign="right" transparent="1" />
+
+		<widget source="Event" render="Label" position="20,555" size="100,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" halign="right" transparent="1">
+		  <convert type="EventTime">StartTime</convert>
+		  <convert type="ClockToText" />
+		</widget>
+		<widget source="Event" render="Label" position="130,555" size="100,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" halign="left" transparent="1">
+		  <convert type="EventTime">EndTime</convert>
+		  <convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="230,555" size="542,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" transparent="1" halign="left">
+		  <convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="Label" position="40,585" zPosition="1" size="1200,60" font="Regular;20" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1" halign="left" valign="top">
+		  <convert type="EventName">ExtendedDescription</convert>
+		</widget>
+
+		<ePixmap position="50,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="362,660" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="668,660" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="974,660" size="250,40" pixmap="Army.HDF.Mod/buttons/blue25.png" alphatest="on" zPosition="1" />
+		<widget name="key_red" render="Label" position="50,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_green" render="Label" position="362,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+	</screen>
+	
+	<screen name="CoolTVGuide" position="0,0" size="1280,720" title="Cool TV Guide" flags="wfNoBorder">
+		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
+		
+		<eLabel text="C  o  o  l    T  V    G  u  i  d  e" position="510,20" size="450,30" font="Regular;26" foregroundColor="grey" backgroundColor="transparent" halign="center" transparent="1" />
+		<widget name="date" position="41,20" size="180,30" font="Regular;26" halign="left" foregroundColor="unffff" backgroundColor="transparent" transparent="1" />
+		
+		<widget source="global.CurrentTime" render="Label" position="260,20" size="160,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" halign="left" transparent="1">
+		  <convert type="ClockToText">WithSeconds</convert>
+		</widget>
+		<widget source="Service" render="CoolPico" position="430,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
+		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
+		
+		<widget source="global.CurrentTime" render="Label" position="1056,20" size="180,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" shadowColor="#000000" halign="right" transparent="1">
+		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+
+		<widget name="timeline_text" position="9,60" size="1192,30" foregroundColor="grey" backgroundColor="darkgrey2" transparent="1" font="Regular; 20" />
+		<widget name="timeline_now" position="0,87" zPosition="2" size="19,470" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="on" />
+		<widget name="list" position="40,87" size="1200,457" CoolPiconFontCol="#FFFFFF" CoolNoPiconBackCol="#aaaaaa" CoolTVBackCol="#aaaaaa" 
+		CoolBackCol="#aaaaaa" CoolTVBackColSel="#aaaaaa" CoolNowFontCol="#FFFFFF" CoolNowBackCol="#aaaaaa" CoolNowBackColSel="#aaaaaa" 
+		CoolNowFontColSel="#000000" CoolFontCol="#FFFFFF" CoolFontColSel="#000000" CoolBorderColR="#00000000" CoolBorderColL="#00000000" 
+		scrollbarMode="showNever" transparent="1" />
+
+		<widget source="Title" render="Label" position="1056,555" size="180,32" zPosition="3" font="Regular;20" foregroundColor="grey" backgroundColor="#444444" halign="right" transparent="1" />
+
+		<widget source="Event" render="Label" position="20,555" size="100,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" halign="right" transparent="1">
+		  <convert type="EventTime">StartTime</convert>
+		  <convert type="ClockToText" />
+		</widget>
+		<widget source="Event" render="Label" position="130,555" size="100,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" halign="left" transparent="1">
+		  <convert type="EventTime">EndTime</convert>
+		  <convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="230,555" size="542,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" transparent="1" halign="left">
+		  <convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="Label" position="40,585" zPosition="1" size="1200,60" font="Regular;20" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1" halign="left" valign="top">
+		  <convert type="EventName">ExtendedDescription</convert>
+		</widget>
+
+		<ePixmap position="50,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="362,660" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="668,660" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="974,660" size="250,40" pixmap="Army.HDF.Mod/buttons/blue25.png" alphatest="on" zPosition="1" />
+		<widget name="key_red" render="Label" position="50,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_green" render="Label" position="362,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+	</screen>
+	
+	<screen name="CoolMultiGuide" position="0,0" size="1280,720" title="Cool Multi Guide" flags="wfNoBorder">
+		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
+		<ePixmap position="37,54" zPosition="1" size="378,216" pixmap="Army.HDF.Mod/tv_2-fs8.png" alphatest="on" />
+		
+		<eLabel text="C  o  o  l    M  u  l  t  i    G  u  i  d  e" position="510,20" size="450,30" font="Regular;26" foregroundColor="grey" backgroundColor="transparent" halign="center" transparent="1" />
+		<widget name="date" position="41,20" size="180,30" font="Regular;26" halign="left" foregroundColor="unffff" backgroundColor="transparent" transparent="1" />
+		
+		<widget source="global.CurrentTime" render="Label" position="260,20" size="160,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" halign="left" transparent="1">
+		  <convert type="ClockToText">WithSeconds</convert>
+		</widget>
+		<widget source="Service" render="CoolPico" position="430,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
+		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
+		
+		<widget source="global.CurrentTime" render="Label" position="1056,20" size="180,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" shadowColor="#000000" halign="right" transparent="1">
+		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<widget source="session.VideoPicture" render="Pig" position="41,58" size="370,208" zPosition="3" backgroundColor="transparent" />
+	
+		<widget source="Event" render="Label" position="420,60" size="100,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" halign="right" transparent="1">
+		  <convert type="EventTime">StartTime</convert>
+		  <convert type="ClockToText" />
+		</widget>
+		<widget source="Event" render="Label" position="533,60" size="100,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" halign="left" transparent="1">
+		  <convert type="EventTime">EndTime</convert>
+		  <convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="630,60" size="542,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" transparent="1" halign="left">
+		  <convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="Label" position="450,94" zPosition="1" size="750,158" font="Regular;20" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1" valign="top">
+		  <convert type="EventName">ExtendedDescription</convert>
+		</widget>
+	
+		<widget name="timeline_text" position="9,276" size="1192,30" foregroundColor="grey" backgroundColor="darkgrey2" transparent="1" font="Regular; 20" />
+		<widget name="list" position="40,303" size="1200,343" CoolPiconFontCol="#FFFFFF" CoolNoPiconBackCol="#aaaaaa" CoolTVBackCol="#aaaaaa" 
+		CoolBackCol="#aaaaaa" CoolTVBackColSel="#aaaaaa" CoolNowFontCol="#FFFFFF" CoolNowBackCol="#aaaaaa" CoolNowBackColSel="#aaaaaa" 
+		CoolNowFontColSel="#000000" CoolFontCol="#FFFFFF" CoolFontColSel="#000000" CoolBorderColR="#00000000" CoolBorderColL="#00000000" 
+		scrollbarMode="showNever" transparent="1" />
+		
+		<widget name="timeline_now" position="0,303" zPosition="2" size="19,343" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="on" />
+
+		<ePixmap position="50,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="362,660" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="668,660" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="974,660" size="250,40" pixmap="Army.HDF.Mod/buttons/blue25.png" alphatest="on" zPosition="1" />
+		<widget name="key_red" render="Label" position="50,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_green" render="Label" position="362,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+	</screen>
+		
+	<screen name="CoolSingleGuide" position="0,0" size="1280,720" title="Cool Single Guide" flags="wfNoBorder">
+		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
+		<ePixmap position="37,54" zPosition="1" size="378,216" pixmap="Army.HDF.Mod/tv_2-fs8.png" alphatest="on" />
+		
+		<eLabel text="C  o  o  l    S  i  n  g  l  e    G  u  i  d  e" position="510,20" size="450,30" font="Regular;26" foregroundColor="grey" backgroundColor="transparent" halign="center" transparent="1" />
+		<widget name="date" position="41,20" size="180,30" font="Regular;26" halign="left" foregroundColor="unffff" backgroundColor="transparent" transparent="1" />
+		
+		<widget source="global.CurrentTime" render="Label" position="260,20" size="160,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" halign="left" transparent="1">
+		  <convert type="ClockToText">WithSeconds</convert>
+		</widget>
+		<widget source="Service" render="CoolPico" position="430,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
+		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
+		
+		<widget source="global.CurrentTime" render="Label" position="1056,20" size="180,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" shadowColor="#000000" halign="right" transparent="1">
+		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<widget source="session.VideoPicture" render="Pig" position="41,58" size="370,208" zPosition="3" backgroundColor="transparent" />
+
+		<widget source="Service" render="Label" position="32,295" size="390,30" zPosition="3" font="Regular;28" halign="center" foregroundColor="unffff" backgroundColor="transparent" transparent="1">
+		  <convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="Event" render="Label" position="170,340" size="110,25" font="Regular;24" halign="center" foregroundColor="yellow" backgroundColor="transparent" transparent="1">
+		  <convert type="EventTime">Remaining</convert>
+		  <convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		
+		<widget source="Event" render="Label" position="100,385" size="100,30" font="Regular;26" foregroundColor="yellow" backgroundColor="transparent" halign="right" transparent="1">
+		  <convert type="EventTime">StartTime</convert>
+		  <convert type="ClockToText" />
+		</widget>
+		<widget source="Event" render="Label" position="213,385" size="100,30" font="Regular;26" foregroundColor="yellow" backgroundColor="transparent" halign="left" transparent="1">
+		  <convert type="EventTime">EndTime</convert>
+		  <convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>
+		
+		<widget source="Event" render="Label" position="40,430" size="542,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" transparent="1" halign="left">
+		  <convert type="EventName">Name</convert>
+		</widget>
+		
+		<widget source="Event" render="Label" position="40,465" zPosition="1" size="1200,158" font="Regular;20" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1" valign="top">
+		  <convert type="EventName">ExtendedDescription</convert>
+		</widget>
+	
+		<widget name="list" position="460,60" size="800,365" itemHeight="28" zPosition="25" CoolFont="Regular;22" CoolEventFont="Regular;22" 
+		CoolDayPos="0" CoolDaySize="50" CoolTimePos="70" CoolTimeSize="70" CoolEventPos="150" 
+		selectionPixmap="Army.HDF.Mod/icons/listselection800x32-fs8.png" CoolDayColor="unffff" CoolTimeColor="yellow" CoolEventColor="#FFFFFF" 
+		CoolRecPreColor="yellow" CoolRecColor="#ff0d0d" CoolBackColor="transparent" CoolBackColorSel="transparent" foregroundColor="#FFFFFF" 
+		backgroundColor="transparent" transparent="1" />
+ 
+		<ePixmap position="50,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="362,660" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="668,660" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="974,660" size="250,40" pixmap="Army.HDF.Mod/buttons/blue25.png" alphatest="on" zPosition="1" />
+		<widget name="key_red" render="Label" position="50,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_green" render="Label" position="362,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+	</screen>
+	
+	<screen name="CoolEasyGuide" position="0,0" size="1280,720" title="Cool Easy Guide" flags="wfNoBorder">
+		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
+		<ePixmap position="37,54" zPosition="1" size="378,216" pixmap="Army.HDF.Mod/tv_2-fs8.png" alphatest="on" />
+		
+		<eLabel text="C  o  o  l    E  a  s  y    G  u  i  d  e" position="510,20" size="450,30" font="Regular;26" foregroundColor="grey" backgroundColor="transparent" halign="center" transparent="1" />
+		<widget name="date" position="41,20" size="180,30" font="Regular;26" halign="left" foregroundColor="unffff" backgroundColor="transparent" transparent="1" />
+		
+		<widget source="global.CurrentTime" render="Label" position="260,20" size="160,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" halign="left" transparent="1">
+		  <convert type="ClockToText">WithSeconds</convert>
+		</widget>
+		<widget source="Service" render="CoolPico" position="430,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
+		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
+		
+		<widget source="global.CurrentTime" render="Label" position="1056,20" size="180,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" shadowColor="#000000" halign="right" transparent="1">
+		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<widget source="session.VideoPicture" render="Pig" position="41,58" size="370,208" zPosition="3" backgroundColor="transparent" />
+	
+		<widget source="Event" render="Label" position="420,60" size="100,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" halign="right" transparent="1">
+		  <convert type="EventTime">StartTime</convert>
+		  <convert type="ClockToText" />
+		</widget>
+		<widget source="Event" render="Label" position="533,60" size="100,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" halign="left" transparent="1">
+		  <convert type="EventTime">EndTime</convert>
+		  <convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="630,60" size="542,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" transparent="1" halign="left">
+		  <convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="Label" position="450,94" zPosition="1" size="750,158" font="Regular;20" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1" valign="top">
+		  <convert type="EventName">ExtendedDescription</convert>
+		</widget>
+	
+		<widget name="list" position="38,283" size="1200,365" itemHeight="28" zPosition="25" CoolFont="Regular;22" CoolServiceFont="Regular;22"
+		CoolEventFont="Regular;22" CoolServiceSize="245" CoolEventSize="595" CoolServicePos="5" CoolServiceHPos="2" CoolEventPos="430"
+		CoolEventHPos="2" CoolBarPos="260" CoolBarHPos="5" CoolBarSize="150" CoolBarHigh="18" CoolTimePos="265" CoolTimeHPos="2"
+		CoolTimeSize="150" CoolDurationPos="1070" CoolDurationSize="120" CoolServiceColor="unffff" CoolDurationColor="yellow"
+		CoolBarColor="grey" CoolEventColor="#FFFFFF" CoolBackColorSel="transparent" CoolRecPreColor="yellow" CoolRecColor="#ff0d0d"
+		CoolFontColSel="unffff" CoolTunerCol="#606060" foregroundColor="#FFFFFF" backgroundColor="transparent" CoolCurrentCol="#0066ff"
+		selectionPixmap="Army.HDF.Mod/icons/listselection1200x32-fs8.png" transparent="1" />		
+		
+		<ePixmap position="50,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="362,660" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="668,660" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="974,660" size="250,40" pixmap="Army.HDF.Mod/buttons/blue25.png" alphatest="on" zPosition="1" />
+		<widget name="key_red" render="Label" position="50,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_green" render="Label" position="362,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+	</screen>
+	
+	<screen name="CoolInfoGuide" position="0,0" size="1280,720" title="Cool Info Guide" flags="wfNoBorder">
+		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
+		<ePixmap position="37,54" zPosition="1" size="378,216" pixmap="Army.HDF.Mod/tv_2-fs8.png" alphatest="on" />
+		
+		<eLabel text="C  o  o  l    I  n  f  o    G  u  i  d  e" position="510,20" size="450,30" font="Regular;26" foregroundColor="grey" backgroundColor="transparent" halign="center" transparent="1" />
+		<widget name="date" position="41,20" size="180,30" font="Regular;26" halign="left" foregroundColor="unffff" backgroundColor="transparent" transparent="1" />
+		
+		<widget source="global.CurrentTime" render="Label" position="260,20" size="160,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" halign="left" transparent="1">
+		  <convert type="ClockToText">WithSeconds</convert>
+		</widget>
+		<widget source="Service" render="CoolPico" position="430,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
+		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
+		
+		<widget source="global.CurrentTime" render="Label" position="1056,20" size="180,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" shadowColor="#000000" halign="right" transparent="1">
+		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<widget source="session.VideoPicture" render="Pig" position="41,58" size="370,208" zPosition="3" backgroundColor="transparent" />
+
+ 		<widget source="Service" render="Label" position="450,60" size="400,32" zPosition="3" font="Regular; 26" foregroundColor="unffff" backgroundColor="transparent" transparent="1">
+		  <convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="Event" render="Label" position="415,95" size="100,25" font="Regular; 22" foregroundColor="yellow" backgroundColor="transparent" halign="right" transparent="1">
+		  <convert type="EventTime">StartTime</convert>
+		  <convert type="ClockToText" />
+		</widget>
+		<widget source="Event" render="Label" position="527,95" size="100,25" font="Regular; 22" foregroundColor="yellow" backgroundColor="transparent" halign="left" transparent="1">
+		  <convert type="EventTime">EndTime</convert>
+		  <convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="620,95" size="200,25" font="Regular; 22" foregroundColor="darkgrey2" halign="left" backgroundColor="transparent" transparent="1">
+		  <convert type="EventTime">Remaining</convert>
+		  <convert type="RemainingToText">InMinutes</convert>
+		</widget>
+
+ 		<eLabel text="Similar broadcasts:" position="888,53" size="366,32" font="Regular;22" foregroundColor="background_tux" backgroundColor="darkgrey2" transparent="1" />
+		<widget name="CoolSimilar" position="890,89" size="366,172" font="Regular;22" foregroundColor="darkgrey2" backgroundColor="transparent" transparent="1" />
+		<widget name="CoolShort" position="450,130" size="391,142" font="Regular;22" foregroundColor="darkgrey2" backgroundColor="transparent" transparent="1" />
+		
+		
+		<widget name="CoolEvent" position="40,283" size="1200,30" itemHeight="30" zPosition="5" CoolFont="Regular;26" CoolDayPos="15" 
+		CoolTimePos="75" CoolEventPos="270" CoolDurationPos="1030" CoolDaySize="55" CoolTimeSize="190" CoolDurationSize="120" 
+		CoolDayColor="unffff" CoolTimeColor="yellow" CoolEventColor="unffff" CoolDurationColor="yellow" CoolTunerCol="#606060" 
+		CoolRecPreColor="yellow" CoolRecColor="#ff0d0d" foregroundColor="#FFFFFF" backgroundColor="transparent" transparent="1" 
+		selectionPixmap="Army.HDF.Mod/icons/listselection1200x32-fs8.png" />
+		
+		<widget name="CoolDescription" position="40,330" size="1200,350" font="Regular;22" foregroundColor="#FFFFFF" backgroundColor="transparent" transparent="1" />
+		
+ 
+		<ePixmap position="50,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="362,660" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="668,660" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="974,660" size="250,40" pixmap="Army.HDF.Mod/buttons/blue25.png" alphatest="on" zPosition="1" />
+		<widget name="key_red" render="Label" position="50,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_green" render="Label" position="362,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+
+	</screen>
+		 
+	<screen name="CoolSearch" position="0,0" size="1280,720" title="Cool Search" flags="wfNoBorder">
+		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
+		<ePixmap position="37,54" zPosition="1" size="378,216" pixmap="Army.HDF.Mod/tv_2-fs8.png" alphatest="on" />
+		
+		<eLabel text="C  o  o  l    S  e  a  r  c  h" position="510,20" size="450,30" font="Regular;26" foregroundColor="grey" backgroundColor="transparent" halign="center" transparent="1" />
+		<widget name="date" position="41,20" size="180,30" font="Regular;26" halign="left" foregroundColor="unffff" backgroundColor="transparent" transparent="1" />
+		
+		<widget source="global.CurrentTime" render="Label" position="260,20" size="160,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" halign="left" transparent="1">
+		  <convert type="ClockToText">WithSeconds</convert>
+		</widget>
+		<widget source="Service" render="CoolPico" position="430,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
+		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
+		
+		<widget source="global.CurrentTime" render="Label" position="1056,20" size="180,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" shadowColor="#000000" halign="right" transparent="1">
+		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<widget source="session.VideoPicture" render="Pig" position="41,58" size="370,208" zPosition="3" backgroundColor="transparent" />
+	
+		<widget source="Event" render="Label" position="450,60" size="542,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" transparent="1" halign="left">
+		  <convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="Label" position="450,94" zPosition="1" size="750,158" font="Regular;20" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1" valign="top">
+		  <convert type="EventName">ExtendedDescription</convert>
+		</widget>
+			
+		<widget name="list" position="38,283" size="1200,365" itemHeight="28" zPosition="3" CoolFont="Regular;22" 
+		CoolServiceFont="Regular;22" CoolEventFont="Regular;22" CoolDayPos="0" CoolDayHPos="2" CoolDatePos="70" CoolDateHPos="2" 
+		CoolTimePos="150" CoolTimeHPos="2" CoolServicePos="230" CoolServiceHPos="2" CoolEventPos="500" CoolEventHPos="2" CoolDaySize="50" 
+		CoolDateSize="70" CoolTimeSize="70" CoolServiceSize="280" CoolEventSize="700" selectionPixmap="Army.HDF.Mod/icons/listselection1200x32-fs8.png"
+		CoolServiceColor="unffff" CoolEventColor="#FFFFFF" CoolDateColor="#FFFFFF" CoolTimeColor="yellow" CoolDayColor="unffff" 
+		CoolBackColor="transparent" CoolBackColorSel="transparent" CoolEventBackColor="transparent" CoolRecEventBackColor="transparent" 
+		CoolRecPreColor="yellow" CoolRecColor="#ff0d0d" backgroundColor="transparent" scrollbarMode="showOnDemand" transparent="1" />
+
+		<ePixmap position="50,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="362,660" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="668,660" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="974,660" size="250,40" pixmap="Army.HDF.Mod/buttons/blue25.png" alphatest="on" zPosition="1" />
+		<widget name="key_red" render="Label" position="50,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_green" render="Label" position="362,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+
+	</screen>
+		
 </skin>
