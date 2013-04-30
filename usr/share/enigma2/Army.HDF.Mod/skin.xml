@@ -4,7 +4,7 @@
 	<output id="0">
 		<resolution xres="1280" yres="720" bpp="32" />
 	</output>
-		<!-- Colors (#AARRGGBB) -->
+	<!-- Colors (#AARRGGBB) -->
 	<colors>
 		<color name="background" value="#25101010" />
 		<color name="background_tux" value="#00e8e8e8" />
@@ -58,7 +58,7 @@
 		<color name="white" value="#00ffffff" />
 		<color name="yellow" value="#00bab329" />
 	</colors>
-		<!-- Fonts -->
+	<!-- Fonts -->
 	<fonts>
 		<font filename="HandelGotD.ttf" name="Regular" scale="100" />
 		<font filename="HandelGotD.ttf" name="RegularAA" scale="100" />
@@ -3287,7 +3287,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		</widget>
 	</screen>
 	
-	 <!-- Cool TV Guide -->
+	 <!-- Cool Channel Guide -->
 	<screen name="CoolChannelGuide" position="0,0" size="1280,720" title="Cool Channel Guide" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
 		<ePixmap position="717,78" zPosition="-1" size="533,300" pixmap="Army.HDF.Mod/tv2_1-fs8.png" alphatest="on" />
@@ -3313,11 +3313,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		  <convert type="ClockToText">Format: %H:%M</convert>
 		</widget>
 	 
-		<widget source="Event" render="Label" position="717,405" size="524,291" font="Regular;24" backgroundColor="transparent" shadowColor="#00605f5e" transparent="1" halign="center" foregroundColor="unffff">
+		<widget source="Event" render="Label" position="717,405" size="524,25" font="Regular;22" backgroundColor="transparent" shadowColor="#00605f5e" transparent="1" halign="center" foregroundColor="unffff">
 		  <convert type="EventName">Name</convert>
 		</widget>
 		 
-		<widget source="Event" render="Progress" position="821,443" size="324,8" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/progress.png" borderWidth="2" borderColor="grey" zPosition="2" transparent="1">
+		<ePixmap position="821,443" size="324,8" zPosition="1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/progress_back.png" />
+    
+		<widget source="Event" render="Progress" position="821,443" size="324,8" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/progress.png" borderWidth="2" borderColor="#000000" zPosition="2" transparent="1">
 		  <convert type="EventTime">Progress</convert>
 		</widget>
 		
@@ -3327,10 +3329,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
  
 		<widget name="list" position="40,59" size="650,485" itemHeight="60" zPosition="25" CoolPico="35" CoolFont="Regular;22" 
 		CoolServiceFont="Regular;22" CoolEventFont="Regular;18" CoolServiceSize="380" CoolEventSize="610" CoolServicePos="10" 
-		CoolServiceHPos="4" CoolEventPos="10" CoolEventHPos="32" CoolBarPos="460" CoolBarHPos="14" CoolBarSize="100" CoolBarHigh="13"
+		CoolServiceHPos="3" CoolEventPos="10" CoolEventHPos="32" CoolBarPos="460" CoolBarHPos="14" CoolBarSize="100" CoolBarHigh="13"
 		CoolTimePos="495" CoolTimeHPos="9" CoolTimeSize="150" CoolDurationPos="510" CoolDurationSize="100" CoolDurationColor="yellow" 
 		CoolTimeColor="black" CoolServiceColor="unffff" CoolBarColor="grey" CoolEventColor="#FFFFFF" CoolBackColorSel="transparent" 
 		CoolRecPreColor="yellow" CoolRecColor="#ff0d0d" CoolTunerCol="#606060" CoolCurrentCol="#0066ff" 
+		CoolPicoHPos="1" CoolMarkerPicPos="2" CoolMarkerPicHPos="1" CoolMarkerHPos="1" CoolMarkerPos="350"
 		selectionPixmap="Army.HDF.Mod/icons/listselection650x60-fs8.png" foregroundColor="#FFFFFF" backgroundColor="transparent" transparent="1" />
 	 
 		<widget source="Service" render="CoolNextEvent" position="40,545" size="475,78" font="Regular;19" 
@@ -3349,7 +3352,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 
 	</screen>
-
+	
+	<!-- Cool Nice Guide -->
 	<screen name="CoolNiceGuide" position="0,0" size="1280,720" title="Cool Nice Guide" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
 		<ePixmap position="37,54" zPosition="1" size="378,216" pixmap="Army.HDF.Mod/tv_2-fs8.png" alphatest="on" />
@@ -3367,7 +3371,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="41,58" size="370,208" zPosition="3" backgroundColor="transparent" />
-	
+		
+		<widget source="Title" render="Label" position="1056,60" size="180,32" zPosition="3" font="Regular;20" foregroundColor="grey" backgroundColor="#444444" halign="right" transparent="1" />
+
 		<widget source="Event" render="Label" position="420,60" size="100,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" halign="right" transparent="1">
 		  <convert type="EventTime">StartTime</convert>
 		  <convert type="ClockToText" />
@@ -3399,9 +3405,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="key_green" render="Label" position="362,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-
 	</screen>
-	
+
+	<!-- Cool Tiny Guide -->	
 	<screen name="CoolTinyGuide" position="0,0" size="1280,720" title="Cool Tiny Guide" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
 		
@@ -3452,6 +3458,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	
+	<!-- Cool TV Guide -->
 	<screen name="CoolTVGuide" position="0,0" size="1280,720" title="Cool TV Guide" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
 		
@@ -3502,6 +3509,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	
+	<!-- Cool Multi Guide -->
 	<screen name="CoolMultiGuide" position="0,0" size="1280,720" title="Cool Multi Guide" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
 		<ePixmap position="37,54" zPosition="1" size="378,216" pixmap="Army.HDF.Mod/tv_2-fs8.png" alphatest="on" />
@@ -3520,6 +3528,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="41,58" size="370,208" zPosition="3" backgroundColor="transparent" />
 	
+		<widget source="Title" render="Label" position="1056,60" size="180,32" zPosition="3" font="Regular;20" foregroundColor="grey" backgroundColor="#444444" halign="right" transparent="1" />
+
 		<widget source="Event" render="Label" position="420,60" size="100,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" halign="right" transparent="1">
 		  <convert type="EventTime">StartTime</convert>
 		  <convert type="ClockToText" />
@@ -3552,7 +3562,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
-		
+	
+	 <!-- Cool Single Guide -->
 	<screen name="CoolSingleGuide" position="0,0" size="1280,720" title="Cool Single Guide" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
 		<ePixmap position="37,54" zPosition="1" size="378,216" pixmap="Army.HDF.Mod/tv_2-fs8.png" alphatest="on" />
@@ -3612,6 +3623,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	
+	 <!-- Cool Easy Guide -->
 	<screen name="CoolEasyGuide" position="0,0" size="1280,720" title="Cool Easy Guide" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
 		<ePixmap position="37,54" zPosition="1" size="378,216" pixmap="Army.HDF.Mod/tv_2-fs8.png" alphatest="on" />
@@ -3630,6 +3642,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="41,58" size="370,208" zPosition="3" backgroundColor="transparent" />
 	
+		<widget source="Title" render="Label" position="1056,60" size="180,32" zPosition="3" font="Regular;20" foregroundColor="grey" backgroundColor="#444444" halign="right" transparent="1" />
+
 		<widget source="Event" render="Label" position="420,60" size="100,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" halign="right" transparent="1">
 		  <convert type="EventTime">StartTime</convert>
 		  <convert type="ClockToText" />
@@ -3663,6 +3677,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	
+	 <!-- Cool Info Guide -->
 	<screen name="CoolInfoGuide" position="0,0" size="1280,720" title="Cool Info Guide" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
 		<ePixmap position="37,54" zPosition="1" size="378,216" pixmap="Army.HDF.Mod/tv_2-fs8.png" alphatest="on" />
@@ -3709,8 +3724,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		selectionPixmap="Army.HDF.Mod/icons/listselection1200x32-fs8.png" />
 		
 		<widget name="CoolDescription" position="40,330" size="1200,350" font="Regular;22" foregroundColor="#FFFFFF" backgroundColor="transparent" transparent="1" />
-		
- 
+
 		<ePixmap position="50,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
 		<ePixmap position="362,660" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
 		<ePixmap position="668,660" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
@@ -3722,6 +3736,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 
 	</screen>
 		 
+	 <!-- Cool Search -->	 
 	<screen name="CoolSearch" position="0,0" size="1280,720" title="Cool Search" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
 		<ePixmap position="37,54" zPosition="1" size="378,216" pixmap="Army.HDF.Mod/tv_2-fs8.png" alphatest="on" />
@@ -3765,5 +3780,4 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 
 	</screen>
-		
 </skin>
