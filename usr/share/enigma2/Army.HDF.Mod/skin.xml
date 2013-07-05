@@ -1422,10 +1422,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 	<!--  Plugin Browser  -->
 	<screen name="PluginBrowser" position="center,center" size="700,520" title="Plugin browser">
 		<widget name="list" position="45,10" size="610,400" scrollbarMode="showOnDemand" selectionPixmap="Army.HDF.Mod/icons/listselection610x50-fs8.png" backgroundColorSelected="#30000000" transparent="1" />
-		<ePixmap position="66,460" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
-		<ePixmap position="383,460" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
-		<widget name="red" position="80,461" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-		<widget name="green" position="383,461" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<ePixmap position="66,420" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="383,420" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
+		<ePixmap position="225,470" size="250,40" pixmap="Army.HDF.Mod/buttons/blue25.png" alphatest="on" zPosition="1" />
+		<widget name="red" position="80,417" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="green" position="393,417" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="blue" position="239,467" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	<!--  Plugin Download Browser -->
 	<screen name="PluginDownloadBrowser" position="center,center" size="800,460" title="Downloadable plugins">
