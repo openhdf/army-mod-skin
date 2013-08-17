@@ -793,8 +793,8 @@
 		<widget name="InfoTextBorder" position="0,0" size="0,0" />
 	</screen>
 	<!--  97 Audio Selection ( Select audio track -->
-	<screen name="AudioSelection" position="center,center" size="800,340" title="Audio">
-		<widget name="config" position="60,20" size="680,110" scrollbarMode="showOnDemand" />
+	<screen name="AudioSelection" position="center,center" size="800,400" title="Audio">
+		<widget name="config" position="60,20" size="680,150" scrollbarMode="showOnDemand" />
 		<widget source="key_red" render="Pixmap" pixmap="Army.HDF.Mod/buttons/key_red.png" position="20,20" size="35,25" alphatest="on">
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -807,7 +807,7 @@
 		<widget source="key_blue" render="Pixmap" pixmap="Army.HDF.Mod/buttons/key_blue.png" position="20,95" size="35,25" alphatest="on">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="streams" render="Listbox" scrollbarMode="showOnDemand" position="20,150" size="760,200" zPosition="3" transparent="1">
+		<widget source="streams" render="Listbox" scrollbarMode="showOnDemand" position="center,190" size="680,200" zPosition="3" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"templates":
 				{"default": (25, [ 
