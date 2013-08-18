@@ -1694,6 +1694,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 			<convert type="ServiceName">Name</convert>
 		</widget>
 	</screen>
+<!-- Subservice selection -->
+  <screen name="SubserviceSelection" position="center,center" size="840,570" title="Subservices" flags="wfNoBorder">
+    <eLabel text="Subservices" position="center,15" size="800,38" zPosition="1" font="Regular;28" halign="center" valign="center" foregroundColor="white" backgroundColor="grey" transparent="1" />
+	<widget name="list" position="center,70" size="770,400" enableWrapAround="1" zPosition="1" scrollbarMode="showOnDemand" />
+  </screen>
 	<!-- Subtitles -->
 	<screen name="Subtitles" position="center,center" size="710,460" title="Subtitle selection">
 		<widget name="config" position="20,20" zPosition="1" size="670,400" scrollbarMode="showOnDemand" />
