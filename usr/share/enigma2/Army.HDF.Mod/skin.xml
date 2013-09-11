@@ -3853,4 +3853,15 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<eLabel position="fill" backgroundColor="#54111112" zPosition="0"/>
 		<widget name="picture" pixmap="distro-logo.png" position="0,0" size="383,225" alphatest="on" zPosition="1"/>
 	</screen>
+  <screen name="Seekbar" position="372,331" size="560,160" title="Seekbar">
+    <widget name="config" position="10,10" scrollbarMode="showOnDemand" selectionPixmap="Army.HDF.Mod/sel.png" size="540,100" />
+    <widget alphatest="on" name="cursor" pixmap="skin_default/position_arrow.png" position="0,125" size="8,18" />
+    <widget foregroundColor="un20224f" pointer="skin_default/position_pointer.png:540,0" position="145,140" render="PositionGauge" size="270,10" source="session.CurrentService" transparent="1" zPosition="2">
+      <convert type="ServicePosition">Gauge</convert>
+    </widget>
+    <widget backgroundColor="un4e5a74" font="Regular;20" halign="left" name="time" position="50,130" size="100,20" transparent="1" />
+    <widget backgroundColor="un4e5a74" font="Regular;20" foregroundColor="orange" halign="right" position="420,130" render="Label" size="90,24" source="session.CurrentService" transparent="1">
+      <convert type="ServicePosition">Length</convert>
+    </widget>
+  </screen>
 </skin>
