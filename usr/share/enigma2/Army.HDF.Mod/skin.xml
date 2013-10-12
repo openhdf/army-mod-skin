@@ -179,6 +179,14 @@
 			<convert type="ServiceInfo">HasHBBTV</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
+		<!-- update check icon -->
+		<ePixmap pixmap="icons/icon_update_off.png" position="280,578" size="20,20" zPosition="0" alphatest="blend" />
+		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="icons/icon_stableupdate.png" position="280,578" size="20,20" zPosition="1" alphatest="blend" >
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="icons/icon_unstableupdate.png" position="280,578" size="20,20" zPosition="1" alphatest="blend" >
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
 	</screen>
 	<!-- QuickEPG -->
 	<screen name="QuickEPG" position="center,530" size="1280,281" title="QuickEPG" flags="wfNoBorder">
@@ -404,6 +412,14 @@
 		<widget source="session.CurrentService" render="FixedLabel" text="HbbTV" position="290,517" size="76,20" font="Regular; 20" zPosition="2" alphatest="on">
 			<convert type="ServiceInfo">HasHBBTV</convert>
 			<convert type="ConditionalShowHide" />
+		</widget>
+		<!-- update check icon -->
+		<ePixmap pixmap="icons/icon_update_off.png" position="280,517" size="20,20" zPosition="0" alphatest="blend" />
+		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="icons/icon_stableupdate.png" position="280,517" size="20,20" zPosition="1" alphatest="blend" >
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="icons/icon_unstableupdate.png" position="280,517" size="20,20" zPosition="1" alphatest="blend" >
+			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<eLabel name="back eLabel" zPosition="3" position="54,23" size="1170,450" backgroundColor="un30000000" />
 		<eLabel name="frame_top Label" zPosition="3" position="54,20" size="1170,2" backgroundColor="grey" />
