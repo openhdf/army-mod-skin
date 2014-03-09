@@ -3862,7 +3862,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 	</screen>
 	 <!-- Enigma Restart -->
         <screen name="QuitMainloopScreen" position="fill" backgroundColor="black" flags="wfNoBorder">
-			<widget name="text" position="center,100" size="720,100" font="RegularAA;26" halign="center" transparent="1" />
+			<widget name="text" position="center,530" size="720,100" font="RegularAA;26" halign="center" transparent="1" />
+			<ePixmap pixmap="Army.HDF.Mod/distro-logo.png" position="center,center" size="600,343" alphatest="blend" />
         </screen>
 	 <!-- Screensaver -->
 	<screen name="Screensaver" position="fill" flags="wfNoBorder">
