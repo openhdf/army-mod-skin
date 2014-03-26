@@ -104,7 +104,8 @@
 		</borderset>
 	</windowstyle>
 	<!-- Main screen colors (id=1 LCD) -->
-	<windowstyle type="skinned" id="1">
+	<!-- blinking display with xp1000 bases stb -->
+	<!--windowstyle type="skinned" id="1">
 		<color name="Background" color="black" />
 		<color name="LabelForeground" color="white" />
 		<color name="ListboxBackground" color="black" />
@@ -117,7 +118,7 @@
 		<color name="ListboxMarkedAndSelectedForeground" color="white" />
 		<color name="WindowTitleForeground" color="white" />
 		<color name="WindowTitleBackground" color="black" />
-	</windowstyle>
+	</windowstyle-->
 	<!-- Main infobar -->
 	<screen name="InfoBar" flags="wfNoBorder" position="0,0" size="1280,720" title="InfoBar" backgroundColor="transparent">
 		<ePixmap position="2,520" zPosition="1" size="1280,281" pixmap="Army.HDF.Mod/infobar_light-fs8.png" />
