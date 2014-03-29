@@ -1540,6 +1540,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 	<screen name="Dish" flags="wfNoBorder" position="1000,180" size="119,146" title="Dish" zPosition="-1" backgroundColor="transparent">
 		<widget name="Dishpixmap" pixmap="Army.HDF.Mod/icons/dish.png" position="0,0" size="119,146" alphatest="off" />
 	</screen>
+	<screen name="UnhandledKey" flags="wfNoBorder" position="1162,20" size="0,0" zPosition="100" backgroundColor="transparent">
+	</screen>
 	<!--  Satfinder -->
 	<screen name="Satfinder" position="center,center" size="950,460" title="Satfinder">
 		<ePixmap pixmap="Army.HDF.Mod/icons/dish_scan.png" position="150,8" zPosition="0" size="119,146" transparent="1" alphatest="on" />
