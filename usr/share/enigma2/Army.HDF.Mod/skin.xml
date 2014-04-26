@@ -143,7 +143,7 @@
 		<widget source="session.Event_Now" render="Label" position="310,620" size="670,30" zPosition="2" halign="left" font="Regular;27" backgroundColor="background" transparent="1" noWrap="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.CurrentService" render="CoolPico" position="88,622" size="100,60" zPosition="10" transparent="1" alphatest="on">
+		<widget source="session.CurrentService" render="Picon" position="88,622" size="100,60" zPosition="10" transparent="1" alphatest="on">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="969,620" size="115,30" zPosition="2" halign="right" font="Regular;27" backgroundColor="background" transparent="1">
