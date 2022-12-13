@@ -19,7 +19,7 @@
 		<color name="grey2" value="#22646c78" />
 		<color name="greyb" value="#007d7d7d" />
 		<color name="hellgreen" value="#2256c856" />
-		<color name="red" value="#00ff0d0d" /> 
+		<color name="red" value="#00ff0d0d" />
 		<color name="transparent" value="#ffffffff" />
 		<color name="transparent2" value="#ff000000" />
 		<color name="transpBlack" value="#14101010" />
@@ -519,7 +519,7 @@
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (15, 2), size = (450, 38), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 26)],
-				"itemHeight": 38 
+				"itemHeight": 38
 				}
 			</convert>
 		</widget>
@@ -533,7 +533,7 @@
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (15,2), size = (450, 38), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 26)],
-				"itemHeight": 38 
+				"itemHeight": 38
 				}
 			</convert>
 		</widget>
@@ -547,7 +547,7 @@
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (15, 2), size = (450, 38), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 26)],
-				"itemHeight": 38 
+				"itemHeight": 38
 				}
 			</convert>
 		</widget>
@@ -561,7 +561,7 @@
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (15, 2), size = (450, 38), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 26)],
-				"itemHeight": 38 
+				"itemHeight": 38
 				}
 			</convert>
 		</widget>
@@ -575,7 +575,7 @@
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (15, 2), size = (450, 38), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 26)],
-				"itemHeight": 38 
+				"itemHeight": 38
 				}
 			</convert>
 		</widget>
@@ -589,7 +589,7 @@
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (15, 2), size = (450, 38), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 26)],
-				"itemHeight": 38 
+				"itemHeight": 38
 				}
 			</convert>
 		</widget>
@@ -828,14 +828,14 @@
 		<widget source="streams" render="Listbox" scrollbarMode="showOnDemand" position="center,190" size="680,200" zPosition="3" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"templates":
-				{"default": (25, [ 
+				{"default": (25, [
 				MultiContentEntryText(pos = (10, 0),   size = (50, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
 				MultiContentEntryText(pos = (90, 0),  size = (70, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # number,
 				MultiContentEntryText(pos = (190, 0), size = (160, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 3), # description,
 				MultiContentEntryText(pos = (350, 0), size = (160, 25), font = 0, flags = RT_HALIGN_LEFT,  text = 4), # language,
 				MultiContentEntryText(pos = (570, 0), size = (100, 25),  font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
 				], True, "showNever"),
-				"notselected": (25, [ 
+				"notselected": (25, [
 				MultiContentEntryText(pos = (10, 0),   size = (50, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
 				MultiContentEntryText(pos = (90, 0),  size = (70, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # number,
 				MultiContentEntryText(pos = (190, 0), size = (160, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 3), # description,
@@ -1179,9 +1179,9 @@
 		<widget source="languages" render="Listbox" position="20,20" size="670,450" scrollbarMode="showNever">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-				MultiContentEntryText(pos = (150, 10), size = (670, 30), flags = RT_HALIGN_LEFT, text = 1), 
+				MultiContentEntryText(pos = (150, 10), size = (670, 30), flags = RT_HALIGN_LEFT, text = 1),
 				# index 1 is the language name,
-				MultiContentEntryPixmapAlphaTest(pos = (30, 5), size = (60, 40), png = 2), 
+				MultiContentEntryPixmapAlphaTest(pos = (30, 5), size = (60, 40), png = 2),
 				# index 2 is the pixmap
 				],
 				"fonts": [gFont("Regular", 25)],
@@ -1349,9 +1349,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget source="nimlist" render="Listbox" position="20,20" size="860,450">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-				MultiContentEntryText(pos = (10, 5), size = (860, 50), flags = RT_HALIGN_LEFT, text = 1), 
+				MultiContentEntryText(pos = (10, 5), size = (860, 50), flags = RT_HALIGN_LEFT, text = 1),
 				# index 1 is the nim name,
-				MultiContentEntryText(pos = (50, 37), size = (820, 50), font = 1, flags = RT_HALIGN_LEFT, text = 2), 
+				MultiContentEntryText(pos = (50, 37), size = (820, 50), font = 1, flags = RT_HALIGN_LEFT, text = 2),
 				# index 2 is a description of the nim settings,
 				],
 				"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
@@ -1741,7 +1741,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="end" position="708,150" size="72,35" font="Regular;25" />
 		<widget name="apply" position="210,240" size="250,35" />
 	</screen>
-	
+
 	<!--  AutoTimer -->
 	<screen name="AutoTimerOverview" position="center,center" size="1160,560" title="AutoTimer Overview" >
 		<widget name="entries"  position="420,35" size="700,433" zPosition="3" itemHeight="33" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" transparent="1" />
@@ -1755,7 +1755,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget source="key_blue" render="Label" position="878,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<ePixmap position="100,center" size="300,300" zPosition="2" pixmap="Army.HDF.Mod/menu/timer.png" transparent="1" alphatest="blend" />
     </screen>
-	
+
 	<screen name="AutoTimerSettings" position="center,center" size="1160,560" title="AutoTimer Settings">
 		<widget name="config" position="30,35" size="680,420" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="background" enableWrapAround="1" transparent="1" />
 		<widget source="help" render="Label" position="760,35" size="310,200" font="Regular;22" backgroundColor="background" transparent="1" />
@@ -1764,7 +1764,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget source="key_red" render="Label" position="32,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget source="key_green" render="Label" position="314,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
-	   
+
 	<screen name="AutoTimerEditor" position="center,center" size="1160,560"  title="AutoTimer Editor">
 		<widget name="config" position="30,35" size="680,420" itemHeight="30" scrollbarMode="showOnDemand" backgroundColor="background" transparent="1" />
 		<widget source="help" render="Label" position="760,35" size="310,200" font="Regular;22" backgroundColor="background" transparent="1" />
@@ -1772,13 +1772,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<ePixmap position="314,500" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
 		<ePixmap position="596,500" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
 		<ePixmap position="878,500" size="250,40" pixmap="Army.HDF.Mod/buttons/blue25.png" alphatest="on" zPosition="1" />
-		
+
 		<widget source="key_red" render="Label" position="32,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget source="key_green" render="Label" position="314,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget source="key_yellow" render="Label" position="596,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget source="key_blue" render="Label" position="878,501" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-	</screen>   
-	   
+	</screen>
+
 	<!-- Timer Edit List -->
 	<screen name="TimerEditList" position="center,center" size="1160,560" title="Timer Editor">
 	<widget name="timerlist" position="20,20" size="1120,350" scrollbarMode="showOnDemand" />
@@ -2685,116 +2685,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget source="key_green" render="Label" position="390,401" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="config" position="20,20" size="670,325" scrollbarMode="showOnDemand" />
 	</screen>-->
-	<!-- LCD/OLED Screens -->
-	<!-- LCD screen (channelselection) -->
-	<screen name="ChannelSelection_summary" position="0,0" size="132,64">
-		<widget source="parent.ServiceEvent" render="Label" position="6,0" size="120,25" font="Display;12" halign="center" valign="center">
-			<convert type="ServiceName">Name</convert>
-		</widget>
-		<widget source="parent.ServiceEvent" render="Progress" position="16,27" size="100,5" borderWidth="1">
-			<convert type="EventTime">Progress</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="6,32" size="90,32" font="Display;30" halign="right" valign="top">
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="100,34" zPosition="1" size="26,30" font="Display;14" valign="top">
-			<convert type="ClockToText">Format:%S</convert>
-		</widget>
-	</screen>
-	<!-- LCD screen (main) -->
-	<!-- InfoBarSummary -->
-	<screen name="InfoBarSummary" position="0,0" size="132,64">
-		<widget source="session.CurrentService" render="Label" position="6,0" size="120,25" font="Display;12" halign="center" valign="center">
-			<convert type="ServiceName">Name</convert>
-		</widget>
-		<widget source="session.Event_Now" render="Progress" position="16,27" size="100,5" borderWidth="1">
-			<convert type="EventTime">Progress</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="6,32" size="90,32" font="Display;30" halign="right" valign="top">
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="100,34" zPosition="1" size="26,30" font="Display;14" valign="top">
-			<convert type="ClockToText">Format:%S</convert>
-		</widget>
-		<widget source="session.RecordState" render="FixedLabel" text=" " position="6,30" zPosition="1" size="120,34">
-			<convert type="ConfigEntryTest">config.usage.blinking_display_clock_during_recording,True,CheckSourceBoolean</convert>
-			<convert type="ConditionalShowHide">Blink</convert>
-		</widget>
-	</screen>
-	<!-- LCD screen (movieplayer) -->
-	<!-- InfoBarMoviePlayerSummary -->
-	<screen name="InfoBarMoviePlayerSummary" position="0,0" size="132,64">
-		<widget source="session.CurrentService" render="Label" position="6,0" size="120,25" font="Display;12" halign="center" valign="center">
-			<convert type="ServiceName">Name</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Progress" position="16,27" size="100,5" borderWidth="1">
-			<convert type="ServicePosition">Position</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="6,32" size="120,32" font="Display;30" halign="center" valign="center">
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<widget source="session.RecordState" render="FixedLabel" text=" " position="6,32" zPosition="1" size="120,32">
-			<convert type="ConfigEntryTest">config.usage.blinking_display_clock_during_recording,True,CheckSourceBoolean</convert>
-			<convert type="ConditionalShowHide">Blink</convert>
-		</widget>
-	</screen>
-	<!-- LCD screen (setup) -->
-	<!-- SetupSummary -->
-	<screen name="SetupSummary" position="0,0" size="132,64">
-		<widget source="SetupTitle" render="Label" position="6,0" size="120,14" font="Display;10" />
-		<widget source="SetupEntry" render="Label" position="6,14" size="120,36" font="Display;10" />
-		<widget source="SetupValue" render="Label" position="6,50" size="120,14" font="Display;10" />
-	</screen>
-	<!-- LCD screen (menus) -->
-	<screen name="MenuSummary" position="0,0" size="132,64">
-		<widget source="parent.title" render="Label" position="6,0" size="120,32" font="Display;14" halign="center" valign="center" />
-		<widget source="parent.menu" render="Label" position="6,32" size="120,32" font="Display;16" halign="center" valign="center">
-			<convert type="StringListSelection" />
-		</widget>
-	</screen>
-	<!-- LCD screen (misc) -->
-	<!-- SimpleSummary -->
-	<screen name="SimpleSummary" position="0,0" size="132,64">
-		<widget source="parent.Title" render="Label" position="6,0" size="120,64" font="Display;14" halign="center" valign="center" />
-	</screen>
-	<!-- LCD screen (standby) -->
-	<!-- StandbySummary -->
-	<screen name="StandbySummary" position="0,0" size="132,64">
-		<widget source="global.CurrentTime" render="Label" position="6,0" size="120,64" font="Display;38" halign="center" valign="center">
-			<convert type="ClockToText">Format:%H:%M</convert>
-	<!-- <convert type="ClockToText">Format:%a %d/%m %H:%M</convert> -->
-		</widget>
-		<widget source="session.RecordState" render="FixedLabel" position="6,0" zPosition="1" size="120,64" text=" ">
-			<convert type="ConfigEntryTest">config.usage.blinking_display_clock_during_recording,True,CheckSourceBoolean</convert>
-			<convert type="ConditionalShowHide">Blink</convert>
-		</widget>
-	</screen>
-	<!-- LCD screen (summary) -->
-	<!-- NabInfoBarSummary -->
-	<screen name="NabInfoBarSummary" position="0,0" size="132,64">
-		<widget source="session.CurrentService" render="Picon" zPosition="1" position="31,0" size="70,40" path="piconlcd">
-			<convert type="ServiceName">Reference</convert>
-		</widget>
-		<widget source="session.RecordState" render="FixedLabel" text="R" position="110,10" size="20,20" font="Display;20">
-			<convert type="ConditionalShowHide">Blink</convert>
-		</widget>
-		<widget source="session.Event_Now" render="Progress" position="3,42" size="126,4" borderWidth="1">
-			<convert type="EventTime">Progress</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="0,46" size="132,18" font="LCD;18" halign="center">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-	</screen>
-	<!-- LCD screen (summary) -->
-	<!-- JobView_summary -->
-	<screen name="JobView_summary" position="0,0" size="132,64">
-		<widget source="parent.summary_job_name" render="Label" position="6,4" size="120,42" font="Display;14" />
-		<widget source="parent.summary_job_task" render="Label" position="6,22" size="120,26" font="Display;10" />
-		<widget source="parent.summary_job_progress" render="Progress" position="6,50" size="60,12" borderWidth="1" zPosition="1" />
-		<widget source="parent.summary_job_progress" render="Label" position="66,50" size="50,12" font="Display;10" zPosition="2" halign="center" transparent="1">
-			<convert type="ProgressToText" />
-		</widget>
-	</screen>
 	<!--  MyTubePlayer -->
 	<screen name="MyTubePlayer" position="0,520" size="1280,720" title="InfoBar" backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-1" size="1280,200" pixmap="Army.HDF.Mod/moviebar-fs8.png" />
@@ -2975,7 +2865,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 				{"template": [
 				MultiContentEntryText(pos = (10, 3), size = (210, 24), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the name
 				MultiContentEntryText(pos = (230, 3), size = (160, 24), font=1, flags = RT_HALIGN_RIGHT, text = 2), # index 2 is the state
-				MultiContentEntryProgress(pos = (400, 3), size = (110, 24), percent = -3), # index 3 should be progress 
+				MultiContentEntryProgress(pos = (400, 3), size = (110, 24), percent = -3), # index 3 should be progress
 				MultiContentEntryText(pos = (520, 3), size = (110, 24), font=1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 is the percentage
 				],
 				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
@@ -3182,9 +3072,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 	<screen name="EMCSelection" position="0,0" size="1280,720" title="Enhanced Movie Center" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
 		<ePixmap position="717,78" zPosition="-1" size="533,300" pixmap="Army.HDF.Mod/tv2_1-fs8.png" alphatest="on" />
-		
+
 		<eLabel text="Enhanced Movie Center" position="210,30" zPosition="2" size="400,32" font="RegularAA;28" halign="left" transparent="1" foregroundColor="unffff" backgroundColor="unb67a2" />
-		
+
 		<widget source="global.CurrentTime" render="Label" position="50,35" size="160,30" font="EMCRegularFont;25" foregroundColor="#00bab329" backgroundColor="#000000" shadowColor="#000000" halign="left" transparent="1">
 			<convert type="EMCClockToText">WithSeconds</convert>
 		</widget>
@@ -3197,16 +3087,16 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget source="Title" render="Label" position="50,70" size="520,20" font="EMCRegularFont;20" foregroundColor="#00bab329" backgroundColor="#444444" transparent="1" />
 		<widget source="session.VideoPicture" render="Pig" position="721,82" size="524,291" zPosition="1" backgroundColor="transparent" />
 		<widget name="Cover" position="721,82" size="524,291" zPosition="4" backgroundColor="#00000000" alphatest="off" transparent="0" />
-		<widget name="list" position="50,100" size="650,534" itemHeight="28" Coolfont="EMCRegularFont;22" CoolSelectfont="EMCRegularFont;22" 
-			CoolDatefont="EMCRegularFont;22" CoolMoviePos="35" CoolMovieSize="450" CoolFolderSize="500" CoolTitleColor="0" 
-			CoolDatePos="1000" CoolDateWidth="110" CoolDateColor="0" CoolHighlightColor="0" 
-			CoolProgressPos="1000" CoolBarPos="507" CoolBarHPos="8" 
+		<widget name="list" position="50,100" size="650,534" itemHeight="28" Coolfont="EMCRegularFont;22" CoolSelectfont="EMCRegularFont;22"
+			CoolDatefont="EMCRegularFont;22" CoolMoviePos="35" CoolMovieSize="450" CoolFolderSize="500" CoolTitleColor="0"
+			CoolDatePos="1000" CoolDateWidth="110" CoolDateColor="0" CoolHighlightColor="0"
+			CoolProgressPos="1000" CoolBarPos="507" CoolBarHPos="8"
 			CoolBarSize="55,10" CoolBarSizeSa="100,10" selectionPixmap="Army.HDF.Mod/icons/listselection700x32-fs8.png"
-			DefaultColor="#FFFFFF" UnwatchedColor="#FFFFFF" WatchingColor="#3486F4" FinishedColor="#46D93A" RecordingColor="#9F1313" 
+			DefaultColor="#FFFFFF" UnwatchedColor="#FFFFFF" WatchingColor="#3486F4" FinishedColor="#46D93A" RecordingColor="#9F1313"
 			BackColorSel="#00000000"  foregroundColorSelected="#ffffff" backgroundColor="#00000000" scrollbarMode="showOnDemand" transparent="1" />
-		
+
 		<widget name="wait" position="0,center" size="1280,50" zPosition="1" font="EMCRegularFont;32" foregroundColor="#FFFFFF" backgroundColor="#18080911" halign="center" valign="center" />
-		
+
 		<widget source="Service" render="Label" position="767,382" size="70,24" font="EMCRegularFont;20" halign="left" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1">
 			<convert type="EMCServiceTime">StartTime</convert>
 			<convert type="EMCClockToText">Format:%H:%M </convert>
@@ -3235,7 +3125,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget source="Service" render="Label" position="947,630" size="300,24" font="EMCRegularFont;20" foregroundColor="#FFFFFF" halign="right" backgroundColor="#444444" transparent="1">
 			<convert type="EMCServiceTime">StartTime</convert>
 			<convert type="EMCClockToText">Date</convert>
-		</widget>	
+		</widget>
 
 		<ePixmap position="50,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
 		<ePixmap position="362,660" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
@@ -3245,7 +3135,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget source="key_green" render="Label" position="362,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget source="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget source="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-	</screen>	
+	</screen>
 
 	<!-- EMC 1280 EMCMediaCenter -->
 	<screen name="EMCMediaCenter" position="0,520" size="1280,720" title="InfoBar" backgroundColor="transparent2" flags="wfNoBorder">
@@ -3313,7 +3203,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 			<convert type="ServicePosition">Summary</convert>
 		</widget>
 	</screen>
-	
+
 	 <!-- Cool Channel Guide -->
 	<screen name="CoolChannelGuide" position="0,0" size="1280,720" title="Cool Channel Guide" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
@@ -3324,49 +3214,49 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		  <convert type="ClockToText">WithSeconds</convert>
 		</widget>
 		<widget source="Service" render="CoolPico" position="430,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
-		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />	
+		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
 		<widget source="global.CurrentTime" render="Label" position="1056,20" size="180,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" shadowColor="#000000" halign="right" transparent="1">
 		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="721,82" size="524,291" zPosition="1" backgroundColor="transparent" />
-		
+
 		<widget source="Event" render="Label" position="721,435" size="100,25" font="Regular; 21" backgroundColor="transparent" shadowColor="#00605f5e" halign="center" transparent="1" foregroundColor="yellow">
 		  <convert type="EventTime">StartTime</convert>
 		  <convert type="ClockToText" />
 		</widget>
-		 
+
 		<widget source="Event" render="Label" position="1145,435" size="100,25" font="Regular; 21" backgroundColor="transparent" shadowColor="#00605f5e" halign="center" transparent="1" foregroundColor="yellow">
 		  <convert type="EventTime">EndTime</convert>
 		  <convert type="ClockToText">Format: %H:%M</convert>
 		</widget>
-	 
+
 		<widget source="Event" render="Label" position="717,405" size="524,25" font="Regular;22" backgroundColor="transparent" shadowColor="#00605f5e" transparent="1" halign="center" foregroundColor="unffff">
 		  <convert type="EventName">Name</convert>
 		</widget>
-		 
+
 		<ePixmap position="821,443" size="324,8" zPosition="1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/progress_back.png" />
-    
+
 		<widget source="Event" render="Progress" position="821,443" size="324,8" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/progress.png" borderWidth="2" borderColor="#000000" zPosition="2" transparent="1">
 		  <convert type="EventTime">Progress</convert>
 		</widget>
-		
+
 		<widget source="Event" render="Label" position="721,470" zPosition="1" size="521,182" font="Regular; 20" foregroundColor="#FFFFFF" backgroundColor="transparent" transparent="1" valign="top">
 		  <convert type="EventName">ExtendedDescription</convert>
 		</widget>
- 
-		<widget name="list" position="40,59" size="650,485" itemHeight="60" zPosition="25" CoolPico="35" CoolFont="Regular;22" 
-		CoolServiceFont="Regular;22" CoolEventFont="Regular;18" CoolServiceSize="380" CoolEventSize="610" CoolServicePos="10" 
+
+		<widget name="list" position="40,59" size="650,485" itemHeight="60" zPosition="25" CoolPico="35" CoolFont="Regular;22"
+		CoolServiceFont="Regular;22" CoolEventFont="Regular;18" CoolServiceSize="380" CoolEventSize="610" CoolServicePos="10"
 		CoolServiceHPos="3" CoolEventPos="10" CoolEventHPos="32" CoolBarPos="460" CoolBarHPos="14" CoolBarSize="100" CoolBarHigh="13"
-		CoolTimePos="495" CoolTimeHPos="9" CoolTimeSize="150" CoolDurationPos="510" CoolDurationSize="100" CoolDurationColor="yellow" 
-		CoolTimeColor="black" CoolServiceColor="unffff" CoolBarColor="grey" CoolEventColor="#FFFFFF" CoolBackColorSel="transparent" 
-		CoolRecPreColor="yellow" CoolRecColor="#ff0d0d" CoolTunerCol="#606060" CoolCurrentCol="#0066ff" 
+		CoolTimePos="495" CoolTimeHPos="9" CoolTimeSize="150" CoolDurationPos="510" CoolDurationSize="100" CoolDurationColor="yellow"
+		CoolTimeColor="black" CoolServiceColor="unffff" CoolBarColor="grey" CoolEventColor="#FFFFFF" CoolBackColorSel="transparent"
+		CoolRecPreColor="yellow" CoolRecColor="#ff0d0d" CoolTunerCol="#606060" CoolCurrentCol="#0066ff"
 		CoolPicoHPos="1" CoolMarkerPicPos="2" CoolMarkerPicHPos="1" CoolMarkerHPos="1" CoolMarkerPos="350"
 		selectionPixmap="Army.HDF.Mod/icons/listselection650x60-fs8.png" foregroundColor="#FFFFFF" backgroundColor="transparent" transparent="1" />
-	 
-		<widget source="Service" render="CoolNextEvent" position="40,545" size="475,78" font="Regular;19" 
+
+		<widget source="Service" render="CoolNextEvent" position="40,545" size="475,78" font="Regular;19"
 		backgroundColor="transparent" foregroundColor="grey2" transparent="1"/>
 
-		<widget source="Title" render="Label" position="40,632" size="180,32" zPosition="3" font="Regular;20" 
+		<widget source="Title" render="Label" position="40,632" size="180,32" zPosition="3" font="Regular;20"
 		foregroundColor="grey" backgroundColor="transparent" halign="left" transparent="1" />
 
 		<ePixmap position="50,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
@@ -3379,26 +3269,26 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 
 	</screen>
-	
+
 	<!-- Cool Nice Guide -->
 	<screen name="CoolNiceGuide" position="0,0" size="1280,720" title="Cool Nice Guide" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
 		<ePixmap position="37,54" zPosition="1" size="378,216" pixmap="Army.HDF.Mod/tv_2-fs8.png" alphatest="on" />
-		
+
 		<eLabel text="C  o  o  l    N  i  c  e    G  u  i  d  e" position="510,20" size="450,30" font="Regular;26" foregroundColor="grey" backgroundColor="transparent" halign="center" transparent="1" />
 		<widget name="date" position="41,20" size="180,30" font="Regular;26" halign="left" foregroundColor="unffff" backgroundColor="transparent" transparent="1" />
-		
+
 		<widget source="global.CurrentTime" render="Label" position="260,20" size="160,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" halign="left" transparent="1">
 		  <convert type="ClockToText">WithSeconds</convert>
 		</widget>
 		<widget source="Service" render="CoolPico" position="430,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
 		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
-		
+
 		<widget source="global.CurrentTime" render="Label" position="1056,20" size="180,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" shadowColor="#000000" halign="right" transparent="1">
 		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="41,58" size="370,208" zPosition="3" backgroundColor="transparent" />
-		
+
 		<widget source="Title" render="Label" position="1056,60" size="180,32" zPosition="3" font="Regular;20" foregroundColor="grey" backgroundColor="#444444" halign="right" transparent="1" />
 
 		<widget source="Event" render="Label" position="420,60" size="100,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" halign="right" transparent="1">
@@ -3415,13 +3305,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget source="Event" render="Label" position="450,120" zPosition="1" size="750,143" font="Regular;20" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1" valign="top">
 		  <convert type="EventName">ExtendedDescription</convert>
 		</widget>
-	
+
 		<widget name="timeline_text" position="9,276" size="1192,30" foregroundColor="grey" backgroundColor="darkgrey2" transparent="1" font="Regular; 20" />
-		<widget name="list" position="40,303" size="1200,343" CoolPiconFontCol="#FFFFFF" CoolNoPiconBackCol="#aaaaaa" CoolTVBackCol="#aaaaaa" 
-		CoolBackCol="#aaaaaa" CoolTVBackColSel="#aaaaaa" CoolNowFontCol="#FFFFFF" CoolNowBackCol="#aaaaaa" CoolNowBackColSel="#aaaaaa" 
-		CoolNowFontColSel="#000000" CoolFontCol="#FFFFFF" CoolFontColSel="#000000" CoolBorderColR="#00000000" CoolBorderColL="#00000000" 
+		<widget name="list" position="40,303" size="1200,343" CoolPiconFontCol="#FFFFFF" CoolNoPiconBackCol="#aaaaaa" CoolTVBackCol="#aaaaaa"
+		CoolBackCol="#aaaaaa" CoolTVBackColSel="#aaaaaa" CoolNowFontCol="#FFFFFF" CoolNowBackCol="#aaaaaa" CoolNowBackColSel="#aaaaaa"
+		CoolNowFontColSel="#000000" CoolFontCol="#FFFFFF" CoolFontColSel="#000000" CoolBorderColR="#00000000" CoolBorderColL="#00000000"
 		scrollbarMode="showNever" transparent="1" />
-		
+
 		<widget name="timeline_now" position="0,303" zPosition="2" size="19,343" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="on" />
 
 		<ePixmap position="50,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
@@ -3434,28 +3324,28 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 
-	<!-- Cool Tiny Guide -->	
+	<!-- Cool Tiny Guide -->
 	<screen name="CoolTinyGuide" position="0,0" size="1280,720" title="Cool Tiny Guide" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
-		
+
 		<eLabel text="C  o  o  l    T  i n  y    G  u  i  d  e" position="510,20" size="450,30" font="Regular;26" foregroundColor="grey" backgroundColor="transparent" halign="center" transparent="1" />
 		<widget name="date" position="41,20" size="180,30" font="Regular;26" halign="left" foregroundColor="unffff" backgroundColor="transparent" transparent="1" />
-		
+
 		<widget source="global.CurrentTime" render="Label" position="260,20" size="160,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" halign="left" transparent="1">
 		  <convert type="ClockToText">WithSeconds</convert>
 		</widget>
 		<widget source="Service" render="CoolPico" position="430,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
 		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
-		
+
 		<widget source="global.CurrentTime" render="Label" position="1056,20" size="180,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" shadowColor="#000000" halign="right" transparent="1">
 		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 
 		<widget name="timeline_text" position="9,60" size="1192,30" foregroundColor="grey" backgroundColor="darkgrey2" transparent="1" font="Regular; 20" />
 		<widget name="timeline_now" position="0,87" zPosition="2" size="19,470" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="on" />
-		<widget name="list" position="40,87" size="1200,465" CoolPiconFontCol="#FFFFFF" CoolNoPiconBackCol="#aaaaaa" CoolTVBackCol="#aaaaaa" 
-		CoolBackCol="#aaaaaa" CoolTVBackColSel="#aaaaaa" CoolNowFontCol="#FFFFFF" CoolNowBackCol="#aaaaaa" CoolNowBackColSel="#aaaaaa" 
-		CoolNowFontColSel="#000000" CoolFontCol="#FFFFFF" CoolFontColSel="#000000" CoolBorderColR="#00000000" CoolBorderColL="#00000000" 
+		<widget name="list" position="40,87" size="1200,465" CoolPiconFontCol="#FFFFFF" CoolNoPiconBackCol="#aaaaaa" CoolTVBackCol="#aaaaaa"
+		CoolBackCol="#aaaaaa" CoolTVBackColSel="#aaaaaa" CoolNowFontCol="#FFFFFF" CoolNowBackCol="#aaaaaa" CoolNowBackColSel="#aaaaaa"
+		CoolNowFontColSel="#000000" CoolFontCol="#FFFFFF" CoolFontColSel="#000000" CoolBorderColR="#00000000" CoolBorderColL="#00000000"
 		scrollbarMode="showNever" transparent="1" />
 
 		<widget source="Title" render="Label" position="1056,555" size="180,32" zPosition="3" font="Regular;20" foregroundColor="grey" backgroundColor="#444444" halign="right" transparent="1" />
@@ -3484,29 +3374,29 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
-	
+
 	<!-- Cool TV Guide -->
 	<screen name="CoolTVGuide" position="0,0" size="1280,720" title="Cool TV Guide" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
-		
+
 		<eLabel text="C  o  o  l    T  V    G  u  i  d  e" position="510,20" size="450,30" font="Regular;26" foregroundColor="grey" backgroundColor="transparent" halign="center" transparent="1" />
 		<widget name="date" position="41,20" size="180,30" font="Regular;26" halign="left" foregroundColor="unffff" backgroundColor="transparent" transparent="1" />
-		
+
 		<widget source="global.CurrentTime" render="Label" position="260,20" size="160,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" halign="left" transparent="1">
 		  <convert type="ClockToText">WithSeconds</convert>
 		</widget>
 		<widget source="Service" render="CoolPico" position="430,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
 		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
-		
+
 		<widget source="global.CurrentTime" render="Label" position="1056,20" size="180,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" shadowColor="#000000" halign="right" transparent="1">
 		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 
 		<widget name="timeline_text" position="9,60" size="1192,30" foregroundColor="grey" backgroundColor="darkgrey2" transparent="1" font="Regular; 20" />
 		<widget name="timeline_now" position="0,87" zPosition="2" size="19,470" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="on" />
-		<widget name="list" position="40,87" size="1200,457" CoolPiconFontCol="#FFFFFF" CoolNoPiconBackCol="#aaaaaa" CoolTVBackCol="#aaaaaa" 
-		CoolBackCol="#aaaaaa" CoolTVBackColSel="#aaaaaa" CoolNowFontCol="#FFFFFF" CoolNowBackCol="#aaaaaa" CoolNowBackColSel="#aaaaaa" 
-		CoolNowFontColSel="#000000" CoolFontCol="#FFFFFF" CoolFontColSel="#000000" CoolBorderColR="#00000000" CoolBorderColL="#00000000" 
+		<widget name="list" position="40,87" size="1200,457" CoolPiconFontCol="#FFFFFF" CoolNoPiconBackCol="#aaaaaa" CoolTVBackCol="#aaaaaa"
+		CoolBackCol="#aaaaaa" CoolTVBackColSel="#aaaaaa" CoolNowFontCol="#FFFFFF" CoolNowBackCol="#aaaaaa" CoolNowBackColSel="#aaaaaa"
+		CoolNowFontColSel="#000000" CoolFontCol="#FFFFFF" CoolFontColSel="#000000" CoolBorderColR="#00000000" CoolBorderColL="#00000000"
 		scrollbarMode="showNever" transparent="1" />
 
 		<widget source="Title" render="Label" position="1056,555" size="180,32" zPosition="3" font="Regular;20" foregroundColor="grey" backgroundColor="#444444" halign="right" transparent="1" />
@@ -3535,26 +3425,26 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
-	
+
 	<!-- Cool Multi Guide -->
 	<screen name="CoolMultiGuide" position="0,0" size="1280,720" title="Cool Multi Guide" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
 		<ePixmap position="37,54" zPosition="1" size="378,216" pixmap="Army.HDF.Mod/tv_2-fs8.png" alphatest="on" />
-		
+
 		<eLabel text="C  o  o  l    M  u  l  t  i    G  u  i  d  e" position="510,20" size="450,30" font="Regular;26" foregroundColor="grey" backgroundColor="transparent" halign="center" transparent="1" />
 		<widget name="date" position="41,20" size="180,30" font="Regular;26" halign="left" foregroundColor="unffff" backgroundColor="transparent" transparent="1" />
-		
+
 		<widget source="global.CurrentTime" render="Label" position="260,20" size="160,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" halign="left" transparent="1">
 		  <convert type="ClockToText">WithSeconds</convert>
 		</widget>
 		<widget source="Service" render="CoolPico" position="430,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
 		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
-		
+
 		<widget source="global.CurrentTime" render="Label" position="1056,20" size="180,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" shadowColor="#000000" halign="right" transparent="1">
 		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="41,58" size="370,208" zPosition="3" backgroundColor="transparent" />
-	
+
 		<widget source="Title" render="Label" position="1056,60" size="180,32" zPosition="3" font="Regular;20" foregroundColor="grey" backgroundColor="#444444" halign="right" transparent="1" />
 
 		<widget source="Event" render="Label" position="420,60" size="100,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" halign="right" transparent="1">
@@ -3572,14 +3462,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget source="Event" render="Label" position="450,120" zPosition="1" size="750,143" font="Regular;20" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1" valign="top">
 		  <convert type="EventName">ExtendedDescription</convert>
 		</widget>
-		
-		
+
+
 		<widget name="timeline_text" position="9,276" size="1192,30" foregroundColor="grey" backgroundColor="darkgrey2" transparent="1" font="Regular; 20" />
-		<widget name="list" position="40,303" size="1200,343" CoolPiconFontCol="#FFFFFF" CoolNoPiconBackCol="#aaaaaa" CoolTVBackCol="#aaaaaa" 
-		CoolBackCol="#aaaaaa" CoolTVBackColSel="#aaaaaa" CoolNowFontCol="#FFFFFF" CoolNowBackCol="#aaaaaa" CoolNowBackColSel="#aaaaaa" 
-		CoolNowFontColSel="#000000" CoolFontCol="#FFFFFF" CoolFontColSel="#000000" CoolBorderColR="#00000000" CoolBorderColL="#00000000" 
+		<widget name="list" position="40,303" size="1200,343" CoolPiconFontCol="#FFFFFF" CoolNoPiconBackCol="#aaaaaa" CoolTVBackCol="#aaaaaa"
+		CoolBackCol="#aaaaaa" CoolTVBackColSel="#aaaaaa" CoolNowFontCol="#FFFFFF" CoolNowBackCol="#aaaaaa" CoolNowBackColSel="#aaaaaa"
+		CoolNowFontColSel="#000000" CoolFontCol="#FFFFFF" CoolFontColSel="#000000" CoolBorderColR="#00000000" CoolBorderColL="#00000000"
 		scrollbarMode="showNever" transparent="1" />
-		
+
 		<widget name="timeline_now" position="0,303" zPosition="2" size="19,343" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="on" />
 
 		<ePixmap position="50,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
@@ -3591,21 +3481,21 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
-	
+
 	 <!-- Cool Single Guide -->
 	<screen name="CoolSingleGuide" position="0,0" size="1280,720" title="Cool Single Guide" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
 		<ePixmap position="37,54" zPosition="1" size="378,216" pixmap="Army.HDF.Mod/tv_2-fs8.png" alphatest="on" />
-		
+
 		<eLabel text="C  o  o  l    S  i  n  g  l  e    G  u  i  d  e" position="510,20" size="450,30" font="Regular;26" foregroundColor="grey" backgroundColor="transparent" halign="center" transparent="1" />
 		<widget name="date" position="41,20" size="180,30" font="Regular;26" halign="left" foregroundColor="unffff" backgroundColor="transparent" transparent="1" />
-		
+
 		<widget source="global.CurrentTime" render="Label" position="260,20" size="160,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" halign="left" transparent="1">
 		  <convert type="ClockToText">WithSeconds</convert>
 		</widget>
 		<widget source="Service" render="CoolPico" position="430,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
 		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
-		
+
 		<widget source="global.CurrentTime" render="Label" position="1056,20" size="180,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" shadowColor="#000000" halign="right" transparent="1">
 		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
@@ -3618,7 +3508,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		  <convert type="EventTime">Remaining</convert>
 		  <convert type="RemainingToText">InMinutes</convert>
 		</widget>
-		
+
 		<widget source="Event" render="Label" position="103,385" size="100,30" font="Regular;26" foregroundColor="yellow" backgroundColor="transparent" halign="right" transparent="1">
 		  <convert type="EventTime">StartTime</convert>
 		  <convert type="ClockToText" />
@@ -3627,21 +3517,21 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		  <convert type="EventTime">EndTime</convert>
 		  <convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
-		
+
 		<widget source="Event" render="Label" position="40,430" size="542,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" transparent="1" halign="left">
 		  <convert type="EventName">Name</convert>
 		</widget>
-		
+
 		<widget source="Event" render="Label" position="40,465" zPosition="1" size="1200,158" font="Regular;20" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1" valign="top">
 		  <convert type="EventName">ExtendedDescription</convert>
 		</widget>
-	
-		<widget name="list" position="460,60" size="800,365" itemHeight="28" zPosition="25" CoolFont="Regular;22" CoolEventFont="Regular;22" 
-		CoolDayPos="0" CoolDaySize="50" CoolTimePos="70" CoolTimeSize="70" CoolEventPos="150" 
-		selectionPixmap="Army.HDF.Mod/icons/listselection800x32-fs8.png" CoolDayColor="unffff" CoolTimeColor="yellow" CoolEventColor="#FFFFFF" 
-		CoolRecPreColor="yellow" CoolRecColor="#ff0d0d" CoolBackColor="transparent" CoolBackColorSel="transparent" foregroundColor="#FFFFFF" 
+
+		<widget name="list" position="460,60" size="800,365" itemHeight="28" zPosition="25" CoolFont="Regular;22" CoolEventFont="Regular;22"
+		CoolDayPos="0" CoolDaySize="50" CoolTimePos="70" CoolTimeSize="70" CoolEventPos="150"
+		selectionPixmap="Army.HDF.Mod/icons/listselection800x32-fs8.png" CoolDayColor="unffff" CoolTimeColor="yellow" CoolEventColor="#FFFFFF"
+		CoolRecPreColor="yellow" CoolRecColor="#ff0d0d" CoolBackColor="transparent" CoolBackColorSel="transparent" foregroundColor="#FFFFFF"
 		backgroundColor="transparent" transparent="1" />
- 
+
 		<ePixmap position="50,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
 		<ePixmap position="362,660" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
 		<ePixmap position="668,660" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
@@ -3651,26 +3541,26 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
-	
+
 	 <!-- Cool Easy Guide -->
 	<screen name="CoolEasyGuide" position="0,0" size="1280,720" title="Cool Easy Guide" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
 		<ePixmap position="37,54" zPosition="1" size="378,216" pixmap="Army.HDF.Mod/tv_2-fs8.png" alphatest="on" />
-		
+
 		<eLabel text="C  o  o  l    E  a  s  y    G  u  i  d  e" position="510,20" size="450,30" font="Regular;26" foregroundColor="grey" backgroundColor="transparent" halign="center" transparent="1" />
 		<widget name="date" position="41,20" size="180,30" font="Regular;26" halign="left" foregroundColor="unffff" backgroundColor="transparent" transparent="1" />
-		
+
 		<widget source="global.CurrentTime" render="Label" position="260,20" size="160,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" halign="left" transparent="1">
 		  <convert type="ClockToText">WithSeconds</convert>
 		</widget>
 		<widget source="Service" render="CoolPico" position="430,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
 		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
-		
+
 		<widget source="global.CurrentTime" render="Label" position="1056,20" size="180,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" shadowColor="#000000" halign="right" transparent="1">
 		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="41,58" size="370,208" zPosition="3" backgroundColor="transparent" />
-	
+
 		<widget source="Title" render="Label" position="1056,60" size="180,32" zPosition="3" font="Regular;20" foregroundColor="grey" backgroundColor="#444444" halign="right" transparent="1" />
 
 		<widget source="Event" render="Label" position="420,60" size="100,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" halign="right" transparent="1">
@@ -3688,15 +3578,15 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget source="Event" render="Label" position="450,120" zPosition="1" size="750,143" font="Regular;20" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1" valign="top">
 		  <convert type="EventName">ExtendedDescription</convert>
 		</widget>
-		
+
 		<widget name="list" position="38,283" size="1200,365" itemHeight="28" zPosition="25" CoolFont="Regular;22" CoolServiceFont="Regular;22"
 		CoolEventFont="Regular;22" CoolServiceSize="245" CoolEventSize="595" CoolServicePos="5" CoolServiceHPos="2" CoolEventPos="430"
 		CoolEventHPos="2" CoolBarPos="260" CoolBarHPos="5" CoolBarSize="150" CoolBarHigh="18" CoolTimePos="265" CoolTimeHPos="2"
 		CoolTimeSize="150" CoolDurationPos="1070" CoolDurationSize="120" CoolServiceColor="unffff" CoolDurationColor="yellow"
 		CoolBarColor="grey" CoolEventColor="#FFFFFF" CoolBackColorSel="transparent" CoolRecPreColor="yellow" CoolRecColor="#ff0d0d"
 		CoolFontColSel="unffff" CoolTunerCol="#606060" foregroundColor="#FFFFFF" backgroundColor="transparent" CoolCurrentCol="#0066ff"
-		selectionPixmap="Army.HDF.Mod/icons/listselection1200x32-fs8.png" transparent="1" />		
-		
+		selectionPixmap="Army.HDF.Mod/icons/listselection1200x32-fs8.png" transparent="1" />
+
 		<ePixmap position="50,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
 		<ePixmap position="362,660" size="250,40" pixmap="Army.HDF.Mod/buttons/green25.png" alphatest="on" zPosition="1" />
 		<ePixmap position="668,660" size="250,40" pixmap="Army.HDF.Mod/buttons/yellow25.png" alphatest="on" zPosition="1" />
@@ -3706,35 +3596,35 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
-	
+
 	<!-- Cool Easy Guide 3 -->
 	<screen name="CoolEasyGuide3" position="0,0" size="1280,720" title="Cool Tiny Guide" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
-		
+
 		<eLabel text="C  o  o  l    E  a  s  y    G  u  i  d  e" position="510,20" size="450,30" font="Regular;26" foregroundColor="grey" backgroundColor="transparent" halign="center" transparent="1" />
 		<widget name="date" position="41,20" size="180,30" font="Regular;26" halign="left" foregroundColor="unffff" backgroundColor="transparent" transparent="1" />
-		
+
 		<widget source="global.CurrentTime" render="Label" position="260,20" size="160,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" halign="left" transparent="1">
 		  <convert type="ClockToText">WithSeconds</convert>
 		</widget>
 		<widget source="Service" render="CoolPico" position="430,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
 		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
-		
+
 		<widget source="global.CurrentTime" render="Label" position="1056,20" size="180,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" shadowColor="#000000" halign="right" transparent="1">
 		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 
 		<widget name="timeline_text" position="9,60" size="1192,30" foregroundColor="grey" backgroundColor="darkgrey2" transparent="1" font="Regular; 20" />
 		<widget name="timeline_now" position="0,87" zPosition="2" size="19,470" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="on" />
-		
+
 		<widget name="list" position="40,70" size="1200,478" itemHeight="28" zPosition="25" CoolFont="Regular;22" CoolServiceFont="Regular;22"
 		CoolEventFont="Regular;22" CoolServiceSize="245" CoolEventSize="595" CoolServicePos="5" CoolServiceHPos="2" CoolEventPos="430"
 		CoolEventHPos="2" CoolBarPos="260" CoolBarHPos="5" CoolBarSize="150" CoolBarHigh="18" CoolTimePos="265" CoolTimeHPos="2"
 		CoolTimeSize="150" CoolDurationPos="1070" CoolDurationSize="120" CoolServiceColor="unffff" CoolDurationColor="yellow"
 		CoolBarColor="grey" CoolEventColor="#FFFFFF" CoolBackColorSel="transparent" CoolRecPreColor="yellow" CoolRecColor="#ff0d0d"
 		CoolFontColSel="unffff" CoolTunerCol="#606060" foregroundColor="#FFFFFF" backgroundColor="transparent" CoolCurrentCol="#0066ff"
-		selectionPixmap="Army.HDF.Mod/icons/listselection1200x32-fs8.png" transparent="1" />	
-		
+		selectionPixmap="Army.HDF.Mod/icons/listselection1200x32-fs8.png" transparent="1" />
+
 		<widget source="Title" render="Label" position="1056,555" size="180,32" zPosition="3" font="Regular;20" foregroundColor="grey" backgroundColor="#444444" halign="right" transparent="1" />
 
 		<widget source="Event" render="Label" position="20,555" size="100,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" halign="right" transparent="1">
@@ -3761,21 +3651,21 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
-	
+
 	 <!-- Cool Info Guide -->
 	<screen name="CoolInfoGuide" position="0,0" size="1280,720" title="Cool Info Guide" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
 		<ePixmap position="37,54" zPosition="1" size="378,216" pixmap="Army.HDF.Mod/tv_2-fs8.png" alphatest="on" />
-		
+
 		<eLabel text="C  o  o  l    I  n  f  o    G  u  i  d  e" position="510,20" size="450,30" font="Regular;26" foregroundColor="grey" backgroundColor="transparent" halign="center" transparent="1" />
 		<widget name="date" position="41,20" size="180,30" font="Regular;26" halign="left" foregroundColor="unffff" backgroundColor="transparent" transparent="1" />
-		
+
 		<widget source="global.CurrentTime" render="Label" position="260,20" size="160,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" halign="left" transparent="1">
 		  <convert type="ClockToText">WithSeconds</convert>
 		</widget>
 		<widget source="Service" render="CoolPico" position="430,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
 		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
-		
+
 		<widget source="global.CurrentTime" render="Label" position="1056,20" size="180,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" shadowColor="#000000" halign="right" transparent="1">
 		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
@@ -3800,14 +3690,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
  		<eLabel text="Similar broadcasts:" position="888,53" size="366,32" font="Regular;22" foregroundColor="background_tux" backgroundColor="darkgrey2" transparent="1" />
 		<widget name="CoolSimilar" position="890,89" size="366,172" font="Regular;22" foregroundColor="darkgrey2" backgroundColor="transparent" transparent="1" />
 		<widget name="CoolShort" position="450,130" size="391,142" font="Regular;22" foregroundColor="darkgrey2" backgroundColor="transparent" transparent="1" />
-		
-		
-		<widget name="CoolEvent" position="40,283" size="1200,30" itemHeight="30" zPosition="5" CoolFont="Regular;26" CoolDayPos="15" 
-		CoolTimePos="75" CoolEventPos="270" CoolDurationPos="1030" CoolDaySize="55" CoolTimeSize="190" CoolDurationSize="120" 
-		CoolDayColor="unffff" CoolTimeColor="yellow" CoolEventColor="unffff" CoolDurationColor="yellow" CoolTunerCol="#606060" 
-		CoolRecPreColor="yellow" CoolRecColor="#ff0d0d" foregroundColor="#FFFFFF" backgroundColor="transparent" transparent="1" 
+
+
+		<widget name="CoolEvent" position="40,283" size="1200,30" itemHeight="30" zPosition="5" CoolFont="Regular;26" CoolDayPos="15"
+		CoolTimePos="75" CoolEventPos="270" CoolDurationPos="1030" CoolDaySize="55" CoolTimeSize="190" CoolDurationSize="120"
+		CoolDayColor="unffff" CoolTimeColor="yellow" CoolEventColor="unffff" CoolDurationColor="yellow" CoolTunerCol="#606060"
+		CoolRecPreColor="yellow" CoolRecColor="#ff0d0d" foregroundColor="#FFFFFF" backgroundColor="transparent" transparent="1"
 		selectionPixmap="Army.HDF.Mod/icons/listselection1200x32-fs8.png" />
-		
+
 		<widget name="CoolDescription" position="40,330" size="1200,350" font="Regular;22" foregroundColor="#FFFFFF" backgroundColor="transparent" transparent="1" />
 
 		<ePixmap position="50,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
@@ -3820,39 +3710,39 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 
 	</screen>
-		 
-	 <!-- Cool Search -->	 
+
+	 <!-- Cool Search -->
 	<screen name="CoolSearch" position="0,0" size="1280,720" title="Cool Search" flags="wfNoBorder">
 		<ePixmap position="1,1" zPosition="-1" size="1280,720" pixmap="Army.HDF.Mod/frame_1.1-fs8.png" />
 		<ePixmap position="37,54" zPosition="1" size="378,216" pixmap="Army.HDF.Mod/tv_2-fs8.png" alphatest="on" />
-		
+
 		<eLabel text="C  o  o  l    S  e  a  r  c  h" position="510,20" size="450,30" font="Regular;26" foregroundColor="grey" backgroundColor="transparent" halign="center" transparent="1" />
 		<widget name="date" position="41,20" size="180,30" font="Regular;26" halign="left" foregroundColor="unffff" backgroundColor="transparent" transparent="1" />
-		
+
 		<widget source="global.CurrentTime" render="Label" position="260,20" size="160,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" halign="left" transparent="1">
 		  <convert type="ClockToText">WithSeconds</convert>
 		</widget>
 		<widget source="Service" render="CoolPico" position="430,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
 		<widget source="Service" render="CoolPico" position="980,20" zPosition="1" size="50,30" alphatest="blend" transparent="1" />
-		
+
 		<widget source="global.CurrentTime" render="Label" position="1056,20" size="180,30" font="Regular;26" foregroundColor="#FFFFFF" backgroundColor="#444444" shadowColor="#000000" halign="right" transparent="1">
 		  <convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="41,58" size="370,208" zPosition="3" backgroundColor="transparent" />
-	
+
 		<widget source="Event" render="Label" position="450,60" size="800,30" font="Regular;26" foregroundColor="unffff" backgroundColor="transparent" transparent="1" halign="left">
 		  <convert type="EventName">Name</convert>
 		</widget>
 		<widget source="Event" render="Label" position="450,94" zPosition="1" size="800,158" font="Regular;20" foregroundColor="#FFFFFF" backgroundColor="#444444" transparent="1" valign="top">
 		  <convert type="EventName">ExtendedDescription</convert>
 		</widget>
-			
-		<widget name="list" position="38,283" size="1200,365" itemHeight="28" zPosition="3" CoolFont="Regular;22" 
-		CoolServiceFont="Regular;22" CoolEventFont="Regular;22" CoolDayPos="0" CoolDayHPos="2" CoolDatePos="70" CoolDateHPos="2" 
-		CoolTimePos="150" CoolTimeHPos="2" CoolServicePos="230" CoolServiceHPos="2" CoolEventPos="500" CoolEventHPos="2" CoolDaySize="50" 
+
+		<widget name="list" position="38,283" size="1200,365" itemHeight="28" zPosition="3" CoolFont="Regular;22"
+		CoolServiceFont="Regular;22" CoolEventFont="Regular;22" CoolDayPos="0" CoolDayHPos="2" CoolDatePos="70" CoolDateHPos="2"
+		CoolTimePos="150" CoolTimeHPos="2" CoolServicePos="230" CoolServiceHPos="2" CoolEventPos="500" CoolEventHPos="2" CoolDaySize="50"
 		CoolDateSize="70" CoolTimeSize="70" CoolServiceSize="280" CoolEventSize="700" selectionPixmap="Army.HDF.Mod/icons/listselection1200x32-fs8.png"
-		CoolServiceColor="unffff" CoolEventColor="#FFFFFF" CoolDateColor="#FFFFFF" CoolTimeColor="yellow" CoolDayColor="unffff" 
-		CoolBackColor="transparent" CoolBackColorSel="transparent" CoolEventBackColor="transparent" CoolRecEventBackColor="transparent" 
+		CoolServiceColor="unffff" CoolEventColor="#FFFFFF" CoolDateColor="#FFFFFF" CoolTimeColor="yellow" CoolDayColor="unffff"
+		CoolBackColor="transparent" CoolBackColorSel="transparent" CoolEventBackColor="transparent" CoolRecEventBackColor="transparent"
 		CoolRecPreColor="yellow" CoolRecColor="#ff0d0d" backgroundColor="transparent" scrollbarMode="showOnDemand" transparent="1" />
 
 		<ePixmap position="50,660" size="250,40" pixmap="Army.HDF.Mod/buttons/red25.png" alphatest="on" zPosition="1" />
@@ -3862,7 +3752,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="key_red" render="Label" position="50,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_green" render="Label" position="362,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_yellow" render="Label" position="668,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />	
+		<widget name="key_blue" render="Label" position="974,661" zPosition="2" size="250,40" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	 <!-- Enigma Restart -->
         <screen name="QuitMainloopScreen" position="fill" backgroundColor="black" flags="wfNoBorder">
